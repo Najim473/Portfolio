@@ -4,8 +4,7 @@
     padding: 0;
 
     body {
-        font-weight: 100;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-family: 'Bellefair', serif;
 
         .container {
             nav {
@@ -18,7 +17,8 @@
                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
                 img {
-                    max-width: 50px;
+                    max-width: 1030px;
+
                     height: auto;
                 }
 
@@ -45,13 +45,12 @@
                 .details {
                     h2 {
                         font-size: 40px;
-                        font-weight: 800;
                         letter-spacing: 0px;
                     }
 
                     p {
                         font-size: 20px;
-                        color: #aaa3a3;
+                        color: #999;
                     }
 
                     .socialIcon {
