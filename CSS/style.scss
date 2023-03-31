@@ -1,23 +1,69 @@
-body {
-    background: #f1eeee;
-    font-weight: 100;
-    font-family: 'Times New Roman', Times, serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
-    .container {
-        nav {
-            padding: 20px;
-            background: #ffffff;
+    body {
+        font-weight: 100;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
-            img {
-                max-width: 50px;
-                height: auto;
+        .container {
+            nav {
+                margin-top: -0.5rem;
+                padding: 20px;
+                background: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+                img {
+                    max-width: 50px;
+                    height: auto;
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+
+                    a {
+                        margin: 20px;
+                        text-decoration: none;
+                        color: #333;
+
+                        li {
+                            font-size: 22px;
+                        }
+                    }
+                }
             }
 
-            ul {
-                list-style: none;
-                display: flex;
+            .content {
+                background: #f9f6f6;
+                padding: 10px;
 
-                li {}
+                .details {
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 800;
+                        letter-spacing: 0px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        color: #aaa3a3;
+                    }
+
+                    .socialIcon {
+
+                        .github,
+                        .linkedin {
+                            width: 30px;
+                            height: auto;
+                            margin: 10px;
+                        }
+                    }
+                }
             }
         }
     }
