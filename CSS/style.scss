@@ -13,7 +13,7 @@
                 background: #ffffff;
                 display: flex;
                 align-items: center;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
                 img {
@@ -39,11 +39,12 @@
             }
 
             .content {
-                background: #f3efef;
+                background: #f7f7f7;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
                 flex-wrap: wrap;
+                padding: 50px 0;
 
                 .details {
                     h2 {
@@ -54,6 +55,7 @@
                     p {
                         font-size: 20px;
                         color: #999;
+                        padding: 15px 0;
                     }
 
                     .socialIcon {
@@ -62,7 +64,10 @@
                         .linkedin {
                             width: 30px;
                             height: auto;
-                            margin: 10px;
+
+                            &:first-child {
+                                margin-right: 30px;
+                            }
                         }
                     }
                 }
