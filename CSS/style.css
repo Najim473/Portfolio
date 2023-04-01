@@ -33,7 +33,7 @@
 }
 * body .container .content {
   background: #f9f6f6;
-  padding: 10px;
+  padding: 80px 10px;
 }
 * body .container .content .details h2 {
   font-size: 40px;
@@ -48,4 +48,12 @@
   width: 30px;
   height: auto;
   margin: 10px;
+}
+* body .container .content .profile {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: relative;
+}
+* body .container .content .profile img {
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
