@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./Img/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./Img/favicon-32x32.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./CSS/style.css" />
     <title>portfolio</title>
   </head>
@@ -36,8 +44,7 @@
           <h2>WEB DEVELOPER</h2>
           <p>
             Hi, I'm Najim. A passionate web developer who designs and develops
-            websites and web applications using javascript
-            and web technologies.
+            websites and web applications using javascript and web technologies.
           </p>
           <div class="socialIcon">
             <a href="#">
@@ -49,10 +56,18 @@
           </div>
         </div>
         <div class="profile">
-          <img src="./Img/me.jpg" alt="">
+          <svg viewBox="0 0 200 200">
+            <path id="blob" d="M100,20 
+                     a80,80 0 1,1 0,160
+                     a80,80 0 1,1 0,-160"
+                  fill="#FFC107"/>
+          </svg>
         </div>
       </div>
     </div>
-    
+    <script>
+      const blob = document.getElementById('blob');
+      blob.setAttribute('transform', 'rotate(45)');
+    </script>
   </body>
 </html>

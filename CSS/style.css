@@ -50,10 +50,5 @@
   margin: 10px;
 }
 * body .container .content .profile {
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  position: relative;
-}
-* body .container .content .profile img {
-  position: relative;
+  width: 300px;
 }/*# sourceMappingURL=style.css.map */
