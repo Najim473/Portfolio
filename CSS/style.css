@@ -12,7 +12,7 @@
   background: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 * body .container nav img {
@@ -32,8 +32,11 @@
   font-size: 22px;
 }
 * body .container .content {
-  background: #f9f6f6;
-  padding: 80px 10px;
+  background: #f3efef;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 * body .container .content .details h2 {
   font-size: 40px;
@@ -49,6 +52,16 @@
   height: auto;
   margin: 10px;
 }
-* body .container .content .profile {
-  width: 300px;
+* body .container .content .profile .me {
+  width: 200px;
+  border: 3px solid #333;
+  animation: move 3s infinite alternate;
+}
+@keyframes move {
+  from {
+    border-radius: 36% 32% 45% 65%/27% 36% 34% 33%;
+  }
+  to {
+    border-radius: 36% 4% 33% 7%/38% 55% 25% 32%;
+  }
 }/*# sourceMappingURL=style.css.map */

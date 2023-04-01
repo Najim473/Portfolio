@@ -13,13 +13,13 @@
                 background: #ffffff;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
                 img {
                     max-width: 1030px;
-
                     height: auto;
+
                 }
 
                 ul {
@@ -39,8 +39,11 @@
             }
 
             .content {
-                background: #f9f6f6;
-                padding: 80px 10px;
+                background: #f3efef;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
 
                 .details {
                     h2 {
@@ -65,7 +68,35 @@
                 }
 
                 .profile {
-                    width: 300px;
+
+                    .me {
+                        width: 200px;
+                        border: 3px solid #333;
+                        -webkit-animation: move 3s infinite alternate;
+                        animation: move 3s infinite alternate;
+
+                        @-webkit-keyframes move {
+                            from {
+                                border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
+                            }
+
+                            to {
+
+                                border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
+                            }
+                        }
+
+                        @keyframes move {
+                            from {
+                                border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
+                            }
+
+                            to {
+
+                                border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
+                            }
+                        }
+                    }
                 }
             }
         }
