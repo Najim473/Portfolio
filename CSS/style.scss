@@ -38,72 +38,96 @@
                 }
             }
 
-            .content {
+            .section {
                 background: #f7f7f7;
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                padding: 50px 0;
+                padding: 20px 0;
 
-                .details {
-                    h2 {
-                        font-size: 40px;
-                        letter-spacing: 0px;
+                .content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    padding: 50px 0;
+
+                    .details {
+                        h2 {
+                            font-size: 40px;
+                            letter-spacing: 0px;
+                        }
+
+                        p {
+                            font-size: 20px;
+                            color: #999;
+                            padding: 15px 0;
+                        }
+
+                        .socialIcon {
+
+                            .github,
+                            .linkedin {
+                                width: 30px;
+                                height: auto;
+
+                                &:first-child {
+                                    margin-right: 30px;
+                                }
+                            }
+                        }
                     }
 
-                    p {
-                        font-size: 20px;
-                        color: #999;
-                        padding: 15px 0;
-                    }
+                    .profile {
 
-                    .socialIcon {
+                        .me {
+                            width: 200px;
+                            border: 3px solid #333;
+                            -webkit-animation: move 3s infinite alternate;
+                            animation: move 3s infinite alternate;
 
-                        .github,
-                        .linkedin {
-                            width: 30px;
-                            height: auto;
+                            @-webkit-keyframes move {
+                                from {
+                                    border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
+                                }
 
-                            &:first-child {
-                                margin-right: 30px;
+                                to {
+
+                                    border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
+                                }
+                            }
+
+                            @keyframes move {
+                                from {
+                                    border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
+                                }
+
+                                to {
+
+                                    border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
+                                }
                             }
                         }
                     }
                 }
 
-                .profile {
+                .skills {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
 
-                    .me {
-                        width: 200px;
-                        border: 3px solid #333;
-                        -webkit-animation: move 3s infinite alternate;
-                        animation: move 3s infinite alternate;
+                    h2 {
+                        font-size: 20px;
+                    }
 
-                        @-webkit-keyframes move {
-                            from {
-                                border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
-                            }
-
-                            to {
-
-                                border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
-                            }
-                        }
-
-                        @keyframes move {
-                            from {
-                                border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
-                            }
-
-                            to {
-
-                                border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
-                            }
+                    .skillsLogo {
+                        img {
+                            padding: 5px;
+                            margin: 0 5px;
+                            width: 60px;
+                            border-radius: 50%;
                         }
                     }
                 }
             }
+
         }
     }
 }
