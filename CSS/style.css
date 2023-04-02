@@ -1,3 +1,8 @@
+/**
+  *
+  * Testing
+  *
+  **/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,9 +12,9 @@
   font-family: "Bellefair", serif;
 }
 * body .container nav {
+  display: block;
   margin-top: -0.5rem;
   padding: 20px;
-  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +35,14 @@
 }
 * body .container nav ul a li {
   font-size: 22px;
+}
+@media (max-width: 900px) {
+  * body .container nav {
+    background: rgb(37, 16, 220);
+  }
+}
+* body .container .sidebar ul li {
+  background: #b41291;
 }
 * body .container .section {
   background: #f7f7f7;
