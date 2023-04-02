@@ -23,7 +23,7 @@
         <a href="#">
           <img src="./Img/logo.png" alt="" />
         </a>
-        <div class="list">
+        <ul class="list">
           <!-- <ul>
             <a href="#">
               <li>Home</li>
@@ -36,7 +36,7 @@
             </a>
             <a href="#"> <li>Contact</li></a>
           </ul> -->
-        </div>
+        </ul>
       </nav>
       <div class="section">
         <div class="content">
@@ -88,7 +88,7 @@
       const navItem = [
         {
           text: "Home",
-          link: "#",
+          link: "/#",
         },
         {
           text: "About",
@@ -103,7 +103,11 @@
           link: "#",
         },
       ];
-      document.querySelector('.list').innerHTML = navItem.map(menu=>`<ul>${menu.text}</ul>`);
+      document.querySelector('.list').innerHTML = navItem.map(menu=>`
+        <a href=${menu.link}>
+          <li>${menu.text}</li>
+          </a>
+        `);
     </script>
   </body>
 </html>
