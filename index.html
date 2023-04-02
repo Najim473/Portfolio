@@ -24,7 +24,7 @@
           <img src="./Img/logo.png" alt="" />
         </a>
         <div class="list">
-          <ul>
+          <!-- <ul>
             <a href="#">
               <li>Home</li>
             </a>
@@ -35,57 +35,75 @@
               <li>Project</li>
             </a>
             <a href="#"> <li>Contact</li></a>
-          </ul>
+          </ul> -->
         </div>
       </nav>
-  <div class="section">
-    <div class="content">
-      <div class="details">
-        <h2>WEB DEVELOPER</h2>
-        <p>
-          Hi, I'm Najim. A passionate web developer who designs and develops
-          websites <br />
-          and web applications using javascript and web technologies.
-        </p>
-        <div class="socialIcon">
-          <a href="#">
-            <img class="linkedin" src="./Img/linkedin.svg" alt="" />
-          </a>
-          <a href="#">
-            <img class="github" src="./Img/github.svg" alt="" />
-          </a>
+      <div class="section">
+        <div class="content">
+          <div class="details">
+            <h2>WEB DEVELOPER</h2>
+            <p>
+              Hi, I'm Najim. A passionate web developer who designs and develops
+              websites <br />
+              and web applications using javascript and web technologies.
+            </p>
+            <div class="socialIcon">
+              <a href="#">
+                <img class="linkedin" src="./Img/linkedin.svg" alt="" />
+              </a>
+              <a href="#">
+                <img class="github" src="./Img/github.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="profile">
+            <img class="me" src="./Img/me.jpg" alt="porfile" />
+          </div>
+        </div>
+        <div class="skills">
+          <h2>Tech Stack <span>|</span></h2>
+          <div class="skillsLogo">
+            <img src="./Img/html.png" alt="html" />
+            <img src="./Img/css.png" alt="css" />
+            <img src="./Img/js.png" alt="js" /><img
+              src="./Img/react.png"
+              alt="react"
+            /><img src="./Img/nextjs.png" alt="nextjs" /><img
+              src="./Img/vuejs.png"
+              alt="vuejs"
+            /><img src="./Img/nodejs.png" alt="nodejs" />
+            <img src="./Img/expressjs.png" alt="expressjs" /><img
+              src="./Img/mongodb.png"
+              alt="mongodb"
+            /><img src="./Img/mui.png" alt="mui" /><img
+              src="./Img/tailwindcss2.png"
+              alt="tailwindcss"
+            />
+            <img src="./Img/sass.png" alt="sass" />
+          </div>
         </div>
       </div>
-      <div class="profile">
-        <img class="me" src="./Img/me.jpg" alt="porfile" />
-      </div>
     </div>
-    <div class="skills">
-      <h2>Tech Stack  <span>|</span></h2>
- <div class="skillsLogo">
-  <img src="./Img/html.png" alt="html" />
-  <img src="./Img/css.png" alt="css" />
-  <img src="./Img/js.png" alt="js" /><img
-    src="./Img/react.png"
-    alt="react"
-  /><img src="./Img/nextjs.png" alt="nextjs" /><img
-    src="./Img/vuejs.png"
-    alt="vuejs"
-  /><img src="./Img/nodejs.png" alt="nodejs" />
-  <img src="./Img/expressjs.png" alt="expressjs" /><img
-    src="./Img/mongodb.png"
-    alt="mongodb"
-  /><img src="./Img/mui.png" alt="mui" /><img
-    src="./Img/tailwindcss.png"
-    alt="tailwindcss"
-  />
-  <img
-    src="./Img/sass.png"
-    alt="sass"
-  />
- </div>
-    </div>
-  </div>
-    </div>
+    <script>
+      const navItem = [
+        {
+          text: "Home",
+          link: "#",
+        },
+        {
+          text: "About",
+          link: "#",
+        },
+        {
+          text: "Projects",
+          link: "#",
+        },
+        {
+          text: "Contact",
+          link: "#",
+        },
+      ];
+      document.querySelector('.list').innerHTML = navItem.map(menu=>`<ul>${menu.text}</ul>`);
+    </script>
   </body>
 </html>

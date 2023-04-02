@@ -118,11 +118,15 @@
                     }
 
                     .skillsLogo {
+                        background: #ffffff;
+                        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+
                         img {
                             padding: 5px;
                             margin: 0 5px;
                             width: 60px;
-                            border-radius: 50%;
                         }
                     }
                 }
