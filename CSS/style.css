@@ -12,7 +12,6 @@
   font-family: "Bellefair", serif;
 }
 * body .container nav {
-  display: block;
   margin-top: -0.5rem;
   padding: 20px;
   display: flex;
@@ -38,11 +37,32 @@
 }
 @media (max-width: 900px) {
   * body .container nav {
-    background: rgb(37, 16, 220);
+    display: none;
   }
 }
-* body .container .sidebar ul li {
+* body .container .sidebar {
+  height: 100vh;
+  width: 100vw;
+  background: #c71515;
+  z-index: 1;
+}
+* body .container .sidebar ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 35px;
+  text-align: center;
+}
+* body .container .sidebar ul a {
+  text-decoration: none;
+  padding: 30px 0;
+}
+* body .container .sidebar ul a li {
   background: #b41291;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar {
+    display: none;
+  }
 }
 * body .container .section {
   background: #f7f7f7;

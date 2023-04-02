@@ -23,14 +23,33 @@
         <a href="#">
           <img src="./Img/logo.png" alt="" />
         </a>
-        <ul class="list">          
-        </ul>
+        <ul class="list"></ul>
       </nav>
       <div class="sidebar">
-         <ul><li>Home</li>
-         <li>About</li>
-         <li>Projects</li>
-         <li>Contact</li></ul>
+        <a href="#">
+          <img src="./Img/logo.png" alt="" />
+        </a>
+        <div class="listItem">
+            <img class="closeBtn" src="./Img/close.svg" alt="closeBtn">
+          <ul>
+            <a href="#">
+              <li>Home</li>
+            </a>
+            <a href="#">
+              <li>About</li>
+
+            </a>
+            <a href="#">
+              <li>Projects</li>
+
+            </a>
+            <a href="#">
+              <li>Contact</li>
+
+            </a>
+          </ul>
+          <img class="closeBtn" src="./Img/menu.svg" alt="closeBtn">
+        </div>
       </div>
       <div class="section">
         <div class="content">
@@ -97,11 +116,13 @@
           link: "#",
         },
       ];
-      document.querySelector('.list').innerHTML = navItem.map(menu=>`
+      document.querySelector(".list").innerHTML = navItem.map(
+        (menu) => `
         <a href=${menu.link}>
           <li>${menu.text}</li>
           </a>
-        `);
+        `
+      );
     </script>
   </body>
 </html>
