@@ -57,7 +57,11 @@
                 .contentdiv {
                     @include media(">=tablet") {
                         // width: 70% ;
-                        margin: 0 12%;
+                        margin: 0 13%;
+                    }
+
+                    @media (min-width:1350px) {
+                        margin: 0 26%;
                     }
 
                     .sidebar-container {
@@ -263,7 +267,9 @@
                                 @media(max-width:1312px) {
                                     padding-bottom: 20px;
                                     font-size: 25px;
-                                    text-decoration: underline;
+                                    text-decoration: rgb(144, 143, 143) underline;
+                                    text-underline-offset: 5px;
+                                    // color: red;
                                 }
 
                                 span {
@@ -279,6 +285,10 @@
                                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
                                 border-radius: 10px;
                                 padding: 5px 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-wrap: wrap;
 
                                 img {
                                     padding: 5px;
