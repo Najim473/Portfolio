@@ -41,21 +41,36 @@
     display: none;
   }
 }
-* body .container .sidebar-container {
+* body .container .contentcontainer {
+  background: #f7f7f7;
+  height: auto;
+}
+@media (max-width: 900px) {
+  * body .container .contentcontainer {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 900px) {
+  * body .container .contentcontainer .contentdiv {
+    margin: 0 12%;
+  }
+}
+* body .container .contentcontainer .contentdiv .sidebar-container {
+  background: #ffffff;
   padding: 10px;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
-* body .container .sidebar-container img {
+* body .container .contentcontainer .contentdiv .sidebar-container img {
   width: 25px;
   height: auto;
   margin-left: 3%;
 }
 @media (min-width: 900px) {
-  * body .container .sidebar-container img {
+  * body .container .contentcontainer .contentdiv .sidebar-container img {
     display: none;
   }
 }
-* body .container .sidebar-container .overlay {
+* body .container .contentcontainer .contentdiv .sidebar-container .overlay {
   height: 0;
   width: 100%;
   position: fixed;
@@ -66,7 +81,7 @@
   overflow: hidden;
   transition: 0.5s;
 }
-* body .container .sidebar-container .overlay a {
+* body .container .contentcontainer .contentdiv .sidebar-container .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -74,31 +89,31 @@
   display: block;
   transition: 0.3s;
 }
-* body .container .sidebar-container .overlay a:hover, * body .container .sidebar-container .overlay a:focus {
+* body .container .contentcontainer .contentdiv .sidebar-container .overlay a:hover, * body .container .contentcontainer .contentdiv .sidebar-container .overlay a:focus {
   color: #f1f1f1;
 }
 @media (min-width: 900px) {
-  * body .container .sidebar-container .overlay a {
+  * body .container .contentcontainer .contentdiv .sidebar-container .overlay a {
     font-size: 20px;
   }
 }
-* body .container .sidebar-container .overlay .closebtn {
+* body .container .contentcontainer .contentdiv .sidebar-container .overlay .closebtn {
   position: absolute;
   top: -10px;
   right: 20px;
   font-size: 60px;
 }
-* body .container .sidebar-container .overlay .closebtn svg:hover path {
+* body .container .contentcontainer .contentdiv .sidebar-container .overlay .closebtn svg:hover path {
   fill: #ffffff;
 }
 @media (min-width: 900px) {
-  * body .container .sidebar-container .overlay .closebtn {
+  * body .container .contentcontainer .contentdiv .sidebar-container .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
 }
-* body .container .sidebar-container .overlay .overlay-content {
+* body .container .contentcontainer .contentdiv .sidebar-container .overlay .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
@@ -106,51 +121,76 @@
   margin-top: 30px;
 }
 @media (min-width: 900px) {
-  * body .container .sidebar-container .overlay {
+  * body .container .contentcontainer .contentdiv .sidebar-container .overlay {
     display: none;
   }
 }
-* body .container .openbtn {
+@media (min-width: 900px) {
+  * body .container .contentcontainer .contentdiv .sidebar-container {
+    background: none;
+  }
+}
+* body .container .contentcontainer .contentdiv .openbtn {
   position: absolute;
   cursor: pointer;
   right: 7%;
   top: 15px;
 }
 @media (min-width: 900px) {
-  * body .container .openbtn {
+  * body .container .contentcontainer .contentdiv .openbtn {
     display: none;
   }
 }
-* body .container .section {
+* body .container .contentcontainer .contentdiv .section {
   background: #f7f7f7;
   padding: 20px 0;
 }
-* body .container .section .content {
+* body .container .contentcontainer .contentdiv .section .content {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 50px 0;
 }
-* body .container .section .content .details h2 {
-  font-size: 40px;
-  letter-spacing: 0px;
+@media (max-width: 900px) {
+  * body .container .contentcontainer .contentdiv .section .content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
-* body .container .section .content .details p {
+* body .container .contentcontainer .contentdiv .section .content .details h2 {
+  font-size: 40px;
+}
+@media (min-width: 900px) and (max-width: 1050px) {
+  * body .container .contentcontainer .contentdiv .section .content .details h2 {
+    font-size: 30px;
+  }
+}
+* body .container .contentcontainer .contentdiv .section .content .details p {
   font-size: 20px;
   color: #999;
   padding: 15px 0;
 }
-* body .container .section .content .details .socialIcon .github,
-* body .container .section .content .details .socialIcon .linkedin {
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .github,
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .linkedin {
   width: 30px;
   height: auto;
 }
-* body .container .section .content .details .socialIcon .github:first-child,
-* body .container .section .content .details .socialIcon .linkedin:first-child {
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .github:first-child,
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .linkedin:first-child {
   margin-right: 30px;
 }
-* body .container .section .content .profile .me {
+@media (max-width: 900px) {
+  * body .container .contentcontainer .contentdiv .section .content .details {
+    margin: 20px 0;
+  }
+}
+@media (min-width: 900px) and (max-width: 1050px) {
+  * body .container .contentcontainer .contentdiv .section .content .details {
+    width: 450px;
+  }
+}
+* body .container .contentcontainer .contentdiv .section .content .profile .me {
   width: 200px;
   border: 3px solid #333;
   animation: move 3s infinite alternate;
@@ -160,24 +200,29 @@
     border-radius: 36% 32% 45% 65%/27% 36% 34% 33%;
   }
   to {
-    border-radius: 36% 4% 33% 7%/38% 55% 25% 32%;
+    border-radius: 36% 10% 33% 7%/38% 55% 25% 32%;
   }
 }
-* body .container .section .skills {
+@media (max-width: 900px) {
+  * body .container .contentcontainer .contentdiv .section .content .profile {
+    margin: -20px 0 20px 0;
+  }
+}
+* body .container .contentcontainer .contentdiv .section .skills {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
-* body .container .section .skills h2 {
+* body .container .contentcontainer .contentdiv .section .skills h2 {
   font-size: 20px;
 }
-* body .container .section .skills .skillsLogo {
+* body .container .contentcontainer .contentdiv .section .skills .skillsLogo {
   background: #ffffff;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   border-radius: 10px;
   padding: 5px 10px;
 }
-* body .container .section .skills .skillsLogo img {
+* body .container .contentcontainer .contentdiv .section .skills .skillsLogo img {
   padding: 5px;
   margin: 0 5px;
   width: 60px;

@@ -25,68 +25,72 @@
         </a>
         <ul class="list"></ul>
       </nav>
-    <div class="sidebar-container">
-      <img src="./Img/logo.png" alt="" />
-      <div id="sidebar" class="overlay">
-        <a href="#" onclick="closeNav()" class="closebtn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" >
-            <path d="M24 1.414L22.586 0L12 10.586L1.414 0L0 1.414L10.586 12L0 22.586L1.414 24L12 13.414L22.586 24L24 22.586L13.414 12L24 1.414Z" fill="#374957"/>      
-            </svg>
-           </a>
-        <div class="overlay-content">
-          <a href="#"> Home </a>
-          <a href="#"> About </a>
-          <a href="#"> Projects </a>
-          <a href="#"> Contact </a>      
-        </div>        
+   <div class="contentcontainer">
+    <div class="contentdiv">
+      <div class="sidebar-container">
+        <img src="./Img/logo.png" alt="" />
+        <div id="sidebar" class="overlay">
+          <a href="#" onclick="closeNav()" class="closebtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" >
+              <path d="M24 1.414L22.586 0L12 10.586L1.414 0L0 1.414L10.586 12L0 22.586L1.414 24L12 13.414L22.586 24L24 22.586L13.414 12L24 1.414Z" fill="#374957"/>      
+              </svg>
+             </a>
+          <div class="overlay-content">
+            <a href="#"> Home </a>
+            <a href="#"> About </a>
+            <a href="#"> Projects </a>
+            <a href="#"> Contact </a>      
+          </div>        
+        </div>
+        <img src="./Img/menu.svg"  class="openbtn" onclick="openNav()"alt="openbtn" />
       </div>
-      <img src="./Img/menu.svg"  class="openbtn" onclick="openNav()"alt="openbtn" />
-    </div>
-      <div class="section">
-        <div class="content">
-          <div class="details">
-            <h2>WEB DEVELOPER</h2>
-            <p>
-              Hi, I'm Najim. A passionate web developer who designs and develops
-              websites <br />
-              and web applications using javascript and web technologies.
-            </p>
-            <div class="socialIcon">
-              <a href="#">
-                <img class="linkedin" src="./Img/linkedin.svg" alt="" />
-              </a>
-              <a href="#">
-                <img class="github" src="./Img/github.svg" alt="" />
-              </a>
+        <div class="section">
+          <div class="content">
+            <div class="details">
+              <h2>WEB DEVELOPER</h2>
+              <p>
+                Hi, I'm Najim. A passionate web developer who designs and develops
+                websites <br />
+                and web applications using javascript and web technologies.
+              </p>
+              <div class="socialIcon">
+                <a href="#">
+                  <img class="linkedin" src="./Img/linkedin.svg" alt="" />
+                </a>
+                <a href="#">
+                  <img class="github" src="./Img/github.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="profile">
+              <img class="me" src="./Img/me.jpg" alt="porfile" />
             </div>
           </div>
-          <div class="profile">
-            <img class="me" src="./Img/me.jpg" alt="porfile" />
+          <div class="skills">
+            <h2>Tech Stack <span>|</span></h2>
+            <div class="skillsLogo">
+              <img src="./Img/html.png" alt="html" />
+              <img src="./Img/css.png" alt="css" />
+              <img src="./Img/js.png" alt="js" /><img
+                src="./Img/react.png"
+                alt="react"
+              /><img src="./Img/nextjs.png" alt="nextjs" /><img
+                src="./Img/vuejs.png"
+                alt="vuejs"
+              /><img src="./Img/nodejs.png" alt="nodejs" />
+              <img src="./Img/expressjs.png" alt="expressjs" /><img
+                src="./Img/mongodb.png"
+                alt="mongodb"
+              /><img src="./Img/mui.png" alt="mui" /><img
+                src="./Img/tailwindcss2.png"
+                alt="tailwindcss"
+              />
+              <img src="./Img/sass.png" alt="sass" />
+            </div>
           </div>
         </div>
-        <div class="skills">
-          <h2>Tech Stack <span>|</span></h2>
-          <div class="skillsLogo">
-            <img src="./Img/html.png" alt="html" />
-            <img src="./Img/css.png" alt="css" />
-            <img src="./Img/js.png" alt="js" /><img
-              src="./Img/react.png"
-              alt="react"
-            /><img src="./Img/nextjs.png" alt="nextjs" /><img
-              src="./Img/vuejs.png"
-              alt="vuejs"
-            /><img src="./Img/nodejs.png" alt="nodejs" />
-            <img src="./Img/expressjs.png" alt="expressjs" /><img
-              src="./Img/mongodb.png"
-              alt="mongodb"
-            /><img src="./Img/mui.png" alt="mui" /><img
-              src="./Img/tailwindcss2.png"
-              alt="tailwindcss"
-            />
-            <img src="./Img/sass.png" alt="sass" />
-          </div>
-        </div>
-      </div>
+    </div>
+   </div>
     </div>
     <script>
       const navItem = [

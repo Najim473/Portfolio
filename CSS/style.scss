@@ -46,183 +46,227 @@
                 }
             }
 
-            .sidebar-container {
-                padding: 10px;
-                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-
-                img {
-                    width: 25px;
-                    height: auto;
-                    margin-left: 3%;
-
-                    @include media(">=tablet") {
-                        display: none;
-                    }
-                }
-
-                .overlay {
-                    height: 0;
-                    width: 100%;
-                    position: fixed;
-                    z-index: 1;
-                    left: 0;
-                    top: 0;
-                    // background-color: rgb(0, 0, 0);
-                    // background-color: rgba(0, 0, 0, 0.9);
-
-                    background: #000;
-                    // overflow-x: hidden;
-                    overflow: hidden;
-                    transition: 0.5s;
-
-                    a {
-                        padding: 8px;
-                        text-decoration: none;
-                        font-size: 36px;
-                        color: #818181;
-                        display: block;
-                        transition: 0.3s;
-
-                        &:hover,
-                        &:focus {
-                            color: #f1f1f1;
-                        }
-
-                        @include media(">=tablet") {
-                            font-size: 20px;
-                        }
-                    }
-
-                    .closebtn {
-                        position: absolute;
-                        top: -10px;
-                        right: 20px;
-                        font-size: 60px;
-
-                        svg {
-                            &:hover path {
-                                fill: #ffffff;
-                            }
-                        }
-
-                        @include media(">=tablet") {
-                            font-size: 40px;
-                            top: 15px;
-                            right: 35px;
-                        }
-                    }
-
-                    .overlay-content {
-                        position: relative;
-                        top: 25%;
-                        width: 100%;
-                        text-align: center;
-                        margin-top: 30px;
-                    }
-
-                    @include media(">=tablet") {
-                        display: none;
-                    }
-                }
-            }
-
-            .openbtn {
-                position: absolute;
-                cursor: pointer;
-                right: 7%;
-                top: 15px;
-
-                @include media(">=tablet") {
-                    display: none;
-                }
-            }
-
-            .section {
+            .contentcontainer {
                 background: #f7f7f7;
-                padding: 20px 0;
+                height: auto;
 
-                .content {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    flex-wrap: wrap;
-                    padding: 50px 0;
-
-                    .details {
-                        h2 {
-                            font-size: 40px;
-                            letter-spacing: 0px;
-                        }
-
-                        p {
-                            font-size: 20px;
-                            color: #999;
-                            padding: 15px 0;
-                        }
-
-                        .socialIcon {
-
-                            .github,
-                            .linkedin {
-                                width: 30px;
-                                height: auto;
-
-                                &:first-child {
-                                    margin-right: 30px;
-                                }
-                            }
-                        }
-                    }
-
-                    .profile {
-                        .me {
-                            width: 200px;
-                            border: 3px solid #333;
-                            -webkit-animation: move 3s infinite alternate;
-                            animation: move 3s infinite alternate;
-
-                            @-webkit-keyframes move {
-                                from {
-                                    border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
-                                }
-
-                                to {
-                                    border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
-                                }
-                            }
-
-                            @keyframes move {
-                                from {
-                                    border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
-                                }
-
-                                to {
-                                    border-radius: 36% 4% 33% 7% /38% 55% 25% 32%;
-                                }
-                            }
-                        }
-                    }
+                @include media("<=tablet") {
+                    padding: 0 10px;
                 }
 
-                .skills {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
-
-                    h2 {
-                        font-size: 20px;
+                .contentdiv {
+                    @include media(">=tablet") {
+                        // width: 70% ;
+                        margin: 0 12%;
                     }
 
-                    .skillsLogo {
+                    .sidebar-container {
                         background: #ffffff;
+                        padding: 10px;
                         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-                        border-radius: 10px;
-                        padding: 5px 10px;
 
                         img {
-                            padding: 5px;
-                            margin: 0 5px;
-                            width: 60px;
+                            width: 25px;
+                            height: auto;
+                            margin-left: 3%;
+
+                            @include media(">=tablet") {
+                                display: none;
+
+                            }
+                        }
+
+                        .overlay {
+                            height: 0;
+                            width: 100%;
+                            position: fixed;
+                            z-index: 1;
+                            left: 0;
+                            top: 0;
+
+                            background: #000;
+                            overflow: hidden;
+                            transition: 0.5s;
+
+                            a {
+                                padding: 8px;
+                                text-decoration: none;
+                                font-size: 36px;
+                                color: #818181;
+                                display: block;
+                                transition: 0.3s;
+
+                                &:hover,
+                                &:focus {
+                                    color: #f1f1f1;
+                                }
+
+                                @include media(">=tablet") {
+                                    font-size: 20px;
+                                }
+                            }
+
+                            .closebtn {
+                                position: absolute;
+                                top: -10px;
+                                right: 20px;
+                                font-size: 60px;
+
+                                svg {
+                                    &:hover path {
+                                        fill: #ffffff;
+                                    }
+                                }
+
+                                @include media(">=tablet") {
+                                    font-size: 40px;
+                                    top: 15px;
+                                    right: 35px;
+                                }
+                            }
+
+                            .overlay-content {
+                                position: relative;
+                                top: 25%;
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 30px;
+                            }
+
+                            @include media(">=tablet") {
+                                display: none;
+                            }
+                        }
+
+                        @include media(">=tablet") {
+                            background: none;
+
+                        }
+                    }
+
+                    .openbtn {
+                        position: absolute;
+                        cursor: pointer;
+                        right: 7%;
+                        top: 15px;
+
+                        @include media(">=tablet") {
+                            display: none;
+                        }
+                    }
+
+                    .section {
+                        background: #f7f7f7;
+                        padding: 20px 0;
+
+                        .content {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            padding: 50px 0;
+
+                            @include media("<=tablet") {
+                                flex-direction: column-reverse;
+                                text-align: center;
+                            }
+
+                            .details {
+
+                                h2 {
+                                    font-size: 40px;
+
+                                    @media(min-width:900px)and (max-width:1050px) {
+                                        font-size: 30px;
+
+                                    }
+                                }
+
+                                p {
+                                    font-size: 20px;
+                                    color: #999;
+                                    padding: 15px 0;
+                                }
+
+                                .socialIcon {
+
+                                    .github,
+                                    .linkedin {
+                                        width: 30px;
+                                        height: auto;
+
+                                        &:first-child {
+                                            margin-right: 30px;
+                                        }
+                                    }
+                                }
+
+                                @include media("<=tablet") {
+                                    margin: 20px 0;
+                                }
+
+                                @media(min-width:900px)and (max-width:1050px) {
+                                    // background: #000;
+                                    width: 450px;
+                                }
+
+                            }
+
+                            .profile {
+                                .me {
+                                    width: 200px;
+                                    border: 3px solid #333;
+                                    -webkit-animation: move 3s infinite alternate;
+                                    animation: move 3s infinite alternate;
+
+                                    @-webkit-keyframes move {
+                                        from {
+                                            border-radius: 36% 32% 25% 65% / 27% 36% 34% 33%;
+                                        }
+
+                                        to {
+                                            border-radius: 36% 34% 33% 7% /38% 55% 25% 32%;
+                                        }
+                                    }
+
+                                    @keyframes move {
+                                        from {
+                                            border-radius: 36% 32% 45% 65% / 27% 36% 34% 33%;
+                                        }
+
+                                        to {
+                                            border-radius: 36% 10% 33% 7% /38% 55% 25% 32%;
+                                        }
+                                    }
+                                }
+
+                                @include media("<=tablet") {
+                                    margin: -20px 0 20px 0;
+                                }
+                            }
+                        }
+
+                        .skills {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            h2 {
+                                font-size: 20px;
+                            }
+
+                            .skillsLogo {
+                                background: #ffffff;
+                                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                                border-radius: 10px;
+                                padding: 5px 10px;
+
+                                img {
+                                    padding: 5px;
+                                    margin: 0 5px;
+                                    width: 60px;
+                                }
+                            }
                         }
                     }
                 }
