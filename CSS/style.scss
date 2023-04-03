@@ -221,11 +221,11 @@
 
                                     @-webkit-keyframes move {
                                         from {
-                                            border-radius: 36% 32% 25% 65% / 27% 36% 34% 33%;
+                                            border-radius: 36% 32% 65% 65% / 77% 36% 74% 63%;
                                         }
 
                                         to {
-                                            border-radius: 36% 34% 33% 7% /38% 55% 25% 32%;
+                                            border-radius: 36% 34% 33% 37% /38% 55% 35% 32%;
                                         }
                                     }
 
@@ -244,18 +244,37 @@
                                     margin: -20px 0 20px 0;
                                 }
                             }
+
+
                         }
 
                         .skills {
                             display: flex;
                             align-items: center;
-                            justify-content: space-between;
+                            justify-content: flex-start;
+
+                            @media(max-width:1312px) {
+                                flex-direction: column;
+                            }
 
                             h2 {
                                 font-size: 20px;
+
+                                @media(max-width:1312px) {
+                                    padding-bottom: 20px;
+                                    font-size: 25px;
+                                    text-decoration: underline;
+                                }
+
+                                span {
+                                    @media(max-width:1312px) {
+                                        display: none;
+                                    }
+                                }
                             }
 
                             .skillsLogo {
+                                margin-left: 30px;
                                 background: #ffffff;
                                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
                                 border-radius: 10px;
