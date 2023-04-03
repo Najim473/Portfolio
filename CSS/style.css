@@ -41,7 +41,21 @@
     display: none;
   }
 }
-* body .container .overlay {
+* body .container .sidebar-container {
+  padding: 10px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+* body .container .sidebar-container img {
+  width: 25px;
+  height: auto;
+  margin-left: 3%;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container img {
+    display: none;
+  }
+}
+* body .container .sidebar-container .overlay {
   height: 0;
   width: 100%;
   position: fixed;
@@ -52,7 +66,7 @@
   overflow: hidden;
   transition: 0.5s;
 }
-* body .container .overlay a {
+* body .container .sidebar-container .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -60,31 +74,31 @@
   display: block;
   transition: 0.3s;
 }
-* body .container .overlay a:hover, * body .container .overlay a:focus {
+* body .container .sidebar-container .overlay a:hover, * body .container .sidebar-container .overlay a:focus {
   color: #f1f1f1;
 }
 @media (min-width: 900px) {
-  * body .container .overlay a {
+  * body .container .sidebar-container .overlay a {
     font-size: 20px;
   }
 }
-* body .container .overlay .closebtn {
+* body .container .sidebar-container .overlay .closebtn {
   position: absolute;
   top: -10px;
   right: 20px;
   font-size: 60px;
 }
-* body .container .overlay .closebtn svg:hover path {
+* body .container .sidebar-container .overlay .closebtn svg:hover path {
   fill: #ffffff;
 }
 @media (min-width: 900px) {
-  * body .container .overlay .closebtn {
+  * body .container .sidebar-container .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
 }
-* body .container .overlay .overlay-content {
+* body .container .sidebar-container .overlay .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
@@ -92,15 +106,15 @@
   margin-top: 30px;
 }
 @media (min-width: 900px) {
-  * body .container .overlay {
+  * body .container .sidebar-container .overlay {
     display: none;
   }
 }
 * body .container .openbtn {
   position: absolute;
-  right: 30px;
-  top: 20px;
   cursor: pointer;
+  right: 7%;
+  top: 15px;
 }
 @media (min-width: 900px) {
   * body .container .openbtn {
