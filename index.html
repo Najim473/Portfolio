@@ -20,37 +20,25 @@
   <body>
     <div class="container">
       <nav>
-        <a href="#">
+        <a href="#" >
           <img src="./Img/logo.png" alt="" />
         </a>
         <ul class="list"></ul>
       </nav>
-      <div class="sidebar">
-        <a href="#">
-          <img src="./Img/logo.png" alt="" />
-        </a>
-        <div class="listItem">
-            <img class="closeBtn" src="./Img/close.svg" alt="closeBtn">
-          <ul>
-            <a href="#">
-              <li>Home</li>
-            </a>
-            <a href="#">
-              <li>About</li>
-
-            </a>
-            <a href="#">
-              <li>Projects</li>
-
-            </a>
-            <a href="#">
-              <li>Contact</li>
-
-            </a>
-          </ul>
-          <img class="closeBtn" src="./Img/menu.svg" alt="closeBtn">
-        </div>
+      <div id="sidebar" class="overlay">
+        <a href="#" onclick="closeNav()" class="closebtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" >
+            <path d="M24 1.414L22.586 0L12 10.586L1.414 0L0 1.414L10.586 12L0 22.586L1.414 24L12 13.414L22.586 24L24 22.586L13.414 12L24 1.414Z" fill="#374957"/>      
+            </svg>
+           </a>
+        <div class="overlay-content">
+          <a href="#"> Home </a>
+          <a href="#"> About </a>
+          <a href="#"> Projects </a>
+          <a href="#"> Contact </a>      
+        </div>        
       </div>
+      <img src="./Img/menu.svg"  class="openbtn" onclick="openNav()"alt="openbtn" />
       <div class="section">
         <div class="content">
           <div class="details">
@@ -123,6 +111,15 @@
           </a>
         `
       );
+      /* Open */
+function openNav() {
+  document.querySelector("#sidebar").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.querySelector("#sidebar").style.height = "0%";
+}
     </script>
   </body>
 </html>

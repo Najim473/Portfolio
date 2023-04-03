@@ -7,6 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 * body {
   font-family: "Bellefair", serif;
@@ -40,27 +41,69 @@
     display: none;
   }
 }
-* body .container .sidebar {
-  height: 100vh;
-  width: 100vw;
-  background: #c71515;
+* body .container .overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
   z-index: 1;
+  left: 0;
+  top: 0;
+  background: #000;
+  overflow: hidden;
+  transition: 0.5s;
 }
-* body .container .sidebar ul {
-  display: flex;
-  flex-direction: column;
-  font-size: 35px;
-  text-align: center;
-}
-* body .container .sidebar ul a {
+* body .container .overlay a {
+  padding: 8px;
   text-decoration: none;
-  padding: 30px 0;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-* body .container .sidebar ul a li {
-  background: #b41291;
+* body .container .overlay a:hover, * body .container .overlay a:focus {
+  color: #f1f1f1;
 }
 @media (min-width: 900px) {
-  * body .container .sidebar {
+  * body .container .overlay a {
+    font-size: 20px;
+  }
+}
+* body .container .overlay .closebtn {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 60px;
+}
+* body .container .overlay .closebtn svg:hover path {
+  fill: #ffffff;
+}
+@media (min-width: 900px) {
+  * body .container .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+* body .container .overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+@media (min-width: 900px) {
+  * body .container .overlay {
+    display: none;
+  }
+}
+* body .container .openbtn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+}
+@media (min-width: 900px) {
+  * body .container .openbtn {
     display: none;
   }
 }
