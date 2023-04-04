@@ -6,8 +6,8 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="32x32"
-      href="./Img/favicon-32x32.png"
+      sizes="92x92"
+      href="./Img/white.svg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -20,15 +20,19 @@
   <body>
     <div class="container">
       <nav>
-        <a href="#" >
-          <img src="./Img/logo.png" alt="" />
+        <a href="#">
+          <img src="./Img/logo.png" alt=""/>
         </a>
-        <ul class="list"></ul>
+        <ul class='list'>
+          <a href="#">  <li>Home</li> </a>
+          <a href="#">  <li>About</li> </a>
+          <a href="#">  <li>Projects</li> </a>
+          <a href="#">  <li>Contact</li> </a>  
+        </ul>
       </nav>
-   <div class="contentcontainer">
-    <div class="contentdiv">
+ 
       <div class="sidebar-container">
-        <img src="./Img/logo.png" alt="" />
+        <img src="./Img/logo.svg" alt="logo" />
         <div id="sidebar" class="overlay">
           <a href="#" onclick="closeNav()" class="closebtn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" >
@@ -44,6 +48,8 @@
         </div>
         <img src="./Img/menu.svg"  class="openbtn" onclick="openNav()"alt="openbtn" />
       </div>
+      <div class="contentcontainer">
+        <div class="contentdiv">
         <div class="section">
           <div class="content">
             <div class="details">
@@ -64,7 +70,7 @@
             </div>
             <div class="profile">
               <img class="me" src="./Img/me.jpg" alt="porfile" />
-            </div>
+            </div>            
           </div>
           <div class="skills">
             <h2>Tech Stack <span>|</span></h2>
@@ -91,33 +97,24 @@
         </div>
     </div>
    </div>
+   <div class="aboutcontainer">
+    <div class="aboutdiv">
+      <div class="about">
+      <div class="aboutimg">
+        
+      </div>
+      <div class="abouttext">
+        <h2>ABOUT ME</h2>
+        <h3>A dedicated Web Developer based <br>in Dhaka, Bangladesh</h3>
+        <p>
+          As a Junior Web Developer, I possess an impressive arsenal <br> of skills in HTML, CSS, JavaScript, React, Next, Vue, MUI,<br> Tailwind, and SCSS. I excel in designing and maintaining responsive<br> websites that offer a smooth user experience. My expertise lies in crafting<br> dynamic, engaging interfaces through writing clean and optimized code and<br> utilizing cutting-edge development tools and techniques. 
+        </p>
+      </div>
+      </div>
     </div>
-    <script>
-      const navItem = [
-        {
-          text: "Home",
-          link: "/#",
-        },
-        {
-          text: "About",
-          link: "#",
-        },
-        {
-          text: "Projects",
-          link: "#",
-        },
-        {
-          text: "Contact",
-          link: "#",
-        },
-      ];
-      document.querySelector(".list").innerHTML = navItem.map(
-        (menu) => `
-        <a href=${menu.link}>
-          <li>${menu.text}</li>
-          </a>
-        `
-      );
+   </div>
+    </div>
+    <script>   
       /* Open */
 function openNav() {
   document.querySelector("#sidebar").style.height = "100%";

@@ -13,7 +13,7 @@
   font-family: "Bellefair", serif;
 }
 * body .container nav {
-  margin-top: -0.5rem;
+  margin-top: 0.5rem;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -24,16 +24,16 @@
   max-width: 1030px;
   height: auto;
 }
-* body .container nav ul {
+* body .container nav .list {
   list-style: none;
   display: flex;
 }
-* body .container nav ul a {
+* body .container nav .list a {
   margin: 20px;
   text-decoration: none;
   color: #333;
 }
-* body .container nav ul a li {
+* body .container nav .list a li {
   font-size: 22px;
 }
 @media (max-width: 900px) {
@@ -41,9 +41,101 @@
     display: none;
   }
 }
+* body .container .sidebar-container {
+  background: #ffffff;
+  padding: 10px 0;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  position: relative;
+  z-index: 1;
+}
+* body .container .sidebar-container img {
+  width: 20px;
+  height: auto;
+  margin-left: 3%;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container img {
+    display: none;
+  }
+}
+* body .container .sidebar-container .overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: #000;
+  overflow: hidden;
+  transition: 0.5s;
+}
+* body .container .sidebar-container .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+* body .container .sidebar-container .overlay a:hover, * body .container .sidebar-container .overlay a:focus {
+  color: #f1f1f1;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container .overlay a {
+    font-size: 20px;
+  }
+}
+* body .container .sidebar-container .overlay .closebtn {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 60px;
+}
+* body .container .sidebar-container .overlay .closebtn svg:hover path {
+  fill: #ffffff;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+* body .container .sidebar-container .overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container .overlay {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container {
+    background: none;
+  }
+}
+* body .container .sidebar-container .openbtn {
+  position: absolute;
+  cursor: pointer;
+  right: 7%;
+  top: 15px;
+}
+@media (min-width: 900px) {
+  * body .container .sidebar-container .openbtn {
+    display: none;
+  }
+}
 * body .container .contentcontainer {
   background: #f7f7f7;
   height: auto;
+  width: 100vw;
+  margin-top: -20px;
+  z-index: 0;
+  padding-bottom: 50px;
 }
 @media (max-width: 900px) {
   * body .container .contentcontainer {
@@ -55,95 +147,9 @@
     margin: 0 13%;
   }
 }
-@media (min-width: 1350px) {
+@media (min-width: 1367px) {
   * body .container .contentcontainer .contentdiv {
-    margin: 0 26%;
-  }
-}
-* body .container .contentcontainer .contentdiv .sidebar-container {
-  background: #ffffff;
-  padding: 10px;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-}
-* body .container .contentcontainer .contentdiv .sidebar-container img {
-  width: 25px;
-  height: auto;
-  margin-left: 3%;
-}
-@media (min-width: 900px) {
-  * body .container .contentcontainer .contentdiv .sidebar-container img {
-    display: none;
-  }
-}
-* body .container .contentcontainer .contentdiv .sidebar-container .overlay {
-  height: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background: #000;
-  overflow: hidden;
-  transition: 0.5s;
-}
-* body .container .contentcontainer .contentdiv .sidebar-container .overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-* body .container .contentcontainer .contentdiv .sidebar-container .overlay a:hover, * body .container .contentcontainer .contentdiv .sidebar-container .overlay a:focus {
-  color: #f1f1f1;
-}
-@media (min-width: 900px) {
-  * body .container .contentcontainer .contentdiv .sidebar-container .overlay a {
-    font-size: 20px;
-  }
-}
-* body .container .contentcontainer .contentdiv .sidebar-container .overlay .closebtn {
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  font-size: 60px;
-}
-* body .container .contentcontainer .contentdiv .sidebar-container .overlay .closebtn svg:hover path {
-  fill: #ffffff;
-}
-@media (min-width: 900px) {
-  * body .container .contentcontainer .contentdiv .sidebar-container .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-* body .container .contentcontainer .contentdiv .sidebar-container .overlay .overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-@media (min-width: 900px) {
-  * body .container .contentcontainer .contentdiv .sidebar-container .overlay {
-    display: none;
-  }
-}
-@media (min-width: 900px) {
-  * body .container .contentcontainer .contentdiv .sidebar-container {
-    background: none;
-  }
-}
-* body .container .contentcontainer .contentdiv .openbtn {
-  position: absolute;
-  cursor: pointer;
-  right: 7%;
-  top: 15px;
-}
-@media (min-width: 900px) {
-  * body .container .contentcontainer .contentdiv .openbtn {
-    display: none;
+    margin: 0 20%;
   }
 }
 * body .container .contentcontainer .contentdiv .section {
@@ -217,6 +223,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 30px;
+}
+@media (max-width: 1634px) and (min-width: 1366px) {
+  * body .container .contentcontainer .contentdiv .section .skills {
+    flex-direction: column;
+  }
 }
 @media (max-width: 1312px) {
   * body .container .contentcontainer .contentdiv .section .skills {
@@ -226,6 +238,15 @@
 * body .container .contentcontainer .contentdiv .section .skills h2 {
   font-size: 20px;
 }
+@media (max-width: 1634px) and (min-width: 1366px) {
+  * body .container .contentcontainer .contentdiv .section .skills h2 {
+    padding-bottom: 20px;
+    font-size: 25px;
+    -webkit-text-decoration: rgb(144, 143, 143) underline;
+            text-decoration: rgb(144, 143, 143) underline;
+    text-underline-offset: 5px;
+  }
+}
 @media (max-width: 1312px) {
   * body .container .contentcontainer .contentdiv .section .skills h2 {
     padding-bottom: 20px;
@@ -233,6 +254,11 @@
     -webkit-text-decoration: rgb(144, 143, 143) underline;
             text-decoration: rgb(144, 143, 143) underline;
     text-underline-offset: 5px;
+  }
+}
+@media (max-width: 1634px) and (min-width: 1366px) {
+  * body .container .contentcontainer .contentdiv .section .skills h2 span {
+    display: none;
   }
 }
 @media (max-width: 1312px) {
@@ -251,8 +277,70 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 1634px) and (min-width: 1366px) {
+  * body .container .contentcontainer .contentdiv .section .skills .skillsLogo {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1312px) {
+  * body .container .contentcontainer .contentdiv .section .skills .skillsLogo {
+    margin-left: 0;
+  }
+}
 * body .container .contentcontainer .contentdiv .section .skills .skillsLogo img {
   padding: 5px;
   margin: 0 5px;
   width: 60px;
+}
+* body .container .aboutcontainer {
+  background: #ffffff;
+  height: auto;
+  width: 100vw;
+  margin-top: -20px;
+  z-index: 0;
+  padding-bottom: 50px;
+}
+@media (max-width: 900px) {
+  * body .container .aboutcontainer {
+    padding: 0 10px;
+  }
+}
+* body .container .aboutcontainer .aboutdiv {
+  padding: 30px 0;
+}
+@media (min-width: 900px) {
+  * body .container .aboutcontainer .aboutdiv {
+    margin: 0 13%;
+  }
+}
+@media (min-width: 1367px) {
+  * body .container .aboutcontainer .aboutdiv {
+    margin: 0 20%;
+  }
+}
+* body .container .aboutcontainer .aboutdiv .about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+* body .container .aboutcontainer .aboutdiv .about .aboutimg {
+  width: 35%;
+  height: 260px;
+  border-radius: 10px;
+  background-image: url("../Img/about.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* body .container .aboutcontainer .aboutdiv .about .abouttext h2 {
+  color: #147efb;
+}
+* body .container .aboutcontainer .aboutdiv .about .abouttext h3 {
+  padding: 20px 0;
+  line-height: 25px;
+}
+* body .container .aboutcontainer .aboutdiv .about .abouttext p {
+  font-size: 18px;
+  line-height: 22px;
 }/*# sourceMappingURL=style.css.map */
