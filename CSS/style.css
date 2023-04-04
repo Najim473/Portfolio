@@ -297,8 +297,8 @@
   height: auto;
   width: 100vw;
   margin-top: -20px;
-  z-index: 0;
   padding-bottom: 50px;
+  z-index: -1;
 }
 @media (max-width: 900px) {
   * body .container .aboutcontainer {
@@ -324,14 +324,48 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-* body .container .aboutcontainer .aboutdiv .about .aboutimg {
-  width: 35%;
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer {
+  position: relative;
+  z-index: 0;
+  width: 450px;
+  height: 360px;
+}
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .aboutimg {
+  width: 350px;
   height: 260px;
   border-radius: 10px;
-  background-image: url("../Img/about.jpg");
+  background-image: url("../Img/about.PNG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate {
+  overflow: hidden;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: #ffffff;
+  border: 1px solid #d4d2d2;
+  border-radius: 50%;
+  top: 130px;
+  right: 75px;
+}
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate svg {
+  fill: currentColor;
+  height: auto;
+  max-width: 66vmin;
+  transform-origin: center;
+  width: 66%;
+  animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 * body .container .aboutcontainer .aboutdiv .about .abouttext h2 {
   color: #147efb;
