@@ -340,31 +340,42 @@
   background-size: cover;
   position: relative;
 }
-* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate {
-  overflow: hidden;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  background: #ffffff;
-  border: 1px solid #d4d2d2;
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  top: 130px;
-  right: 75px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate svg {
-  fill: currentColor;
-  height: auto;
-  max-width: 66vmin;
-  transform-origin: center;
-  width: 66%;
-  animation: rotation 8s infinite linear;
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle .logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("../Img/me.jpg");
+  background-size: cover;
+  border-radius: 50%;
 }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle .text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: rotateText 15s linear infinite;
+}
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle .text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
   }
-  to {
-    transform: rotate(359deg);
+  100% {
+    transform: rotate(0deg);
   }
 }
 * body .container .aboutcontainer .aboutdiv .about .abouttext h2 {

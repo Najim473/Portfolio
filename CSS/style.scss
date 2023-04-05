@@ -387,35 +387,59 @@
                             }
 
                             .rotate {
-                                overflow: hidden;
-                                position: absolute;
-                                height: 150px;
-                                width: 150px;
-                                background: #ffffff;
-                                border: 1px solid #d4d2d2;
-                                border-radius: 50%;
-                                top: 130px;
-                                right: 75px;
+                                .circle {
+                                    position: relative;
+                                    width: 200px;
+                                    height: 200px;
+                                    border-radius: 50%;
+                                    background-color: #ccc;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
 
-                                svg {
+                                    .logo {
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        background-image: url("../Img/me.jpg");
+                                        background-size: cover;
+                                        border-radius: 50%;
+                                        // filter: brightness(1.5) contrast(1.5);
+                                    }
 
-                                    fill: currentColor;
-                                    height: auto;
-                                    max-width: 66vmin;
-                                    transform-origin: center;
-                                    width: 66%;
-                                    animation: rotation 8s infinite linear;
+                                    .text {
+                                        position: absolute;
+                                        height: 100%;
+                                        width: 100%;
+                                        animation: rotateText 15s linear infinite;
 
-                                    @keyframes rotation {
-                                        from {
-                                            transform: rotate(0deg);
+                                        span {
+                                            position: absolute;
+                                            left: 50%;
+                                            font-size: 1.2em;
+                                            transform-origin: 0 100px;
                                         }
 
-                                        to {
-                                            transform: rotate(359deg);
+                                        @keyframes rotateText {
+                                            0% {
+                                                transform: rotate(360deg);
+                                            }
+
+                                            100% {
+                                                transform: rotate(0deg);
+                                            }
                                         }
                                     }
                                 }
+
+
+
+
+
+
+
+
+
                             }
                         }
 
