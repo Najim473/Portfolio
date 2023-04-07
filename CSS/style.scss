@@ -367,13 +367,14 @@
                         align-items: center;
                         justify-content: space-between;
                         flex-wrap: wrap;
-
+                        background: #6aa178;
 
                         .aboutimgcontainer {
-                            position: relative;
+                            overflow: hidden;
                             z-index: 0;
                             width: 450px;
-                            height: 360px;
+                            height: 320px;
+                            position: relative;
 
                             .aboutimg {
                                 width: 350px;
@@ -384,30 +385,40 @@
                                 background-repeat: no-repeat;
                                 background-size: cover;
                                 position: relative;
+                                overflow: hidden;
+
                             }
 
                             .rotate {
+                                right: 50px;
+                                bottom: 0px;
+                                position: absolute;
+                                overflow: hidden;
+
                                 .circle {
-                                    position: relative;
-                                    width: 200px;
-                                    height: 200px;
+                                    overflow: hidden;
+                                    width: 180px;
+                                    height: 180px;
                                     border-radius: 50%;
-                                    background-color: #ccc;
+                                    // background-color: #ccc;
+                                    background: #ffffff;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
 
                                     .logo {
                                         position: absolute;
-                                        width: 150px;
-                                        height: 150px;
-                                        background-image: url("../Img/me.jpg");
+                                        width: 120px;
+                                        height: 120px;
+                                        background-image: url("../Img/laptop.svg");
                                         background-size: cover;
+                                        background-position: center;
                                         border-radius: 50%;
                                         // filter: brightness(1.5) contrast(1.5);
                                     }
 
                                     .text {
+                                        overflow: hidden;
                                         position: absolute;
                                         height: 100%;
                                         width: 100%;
@@ -416,8 +427,9 @@
                                         span {
                                             position: absolute;
                                             left: 50%;
-                                            font-size: 1.2em;
-                                            transform-origin: 0 100px;
+                                            top: 18px;
+                                            font-size: 15px;
+                                            transform-origin: 0 75px;
                                         }
 
                                         @keyframes rotateText {
@@ -431,21 +443,13 @@
                                         }
                                     }
                                 }
-
-
-
-
-
-
-
-
-
                             }
+
                         }
 
                         .abouttext {
                             // background: #000;
-
+                            margin-top: -60px;
 
                             h2 {
                                 color: #147efb;

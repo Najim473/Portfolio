@@ -323,12 +323,14 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background: #6aa178;
 }
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer {
-  position: relative;
+  overflow: hidden;
   z-index: 0;
   width: 450px;
-  height: 360px;
+  height: 320px;
+  position: relative;
 }
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .aboutimg {
   width: 350px;
@@ -339,26 +341,35 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
+}
+* body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate {
+  right: 50px;
+  bottom: 0px;
+  position: absolute;
+  overflow: hidden;
 }
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle {
-  position: relative;
-  width: 200px;
-  height: 200px;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background-color: #ccc;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle .logo {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background-image: url("../Img/me.jpg");
+  width: 120px;
+  height: 120px;
+  background-image: url("../Img/laptop.svg");
   background-size: cover;
+  background-position: center;
   border-radius: 50%;
 }
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle .text {
+  overflow: hidden;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -367,8 +378,9 @@
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer .rotate .circle .text span {
   position: absolute;
   left: 50%;
-  font-size: 1.2em;
-  transform-origin: 0 100px;
+  top: 18px;
+  font-size: 15px;
+  transform-origin: 0 75px;
 }
 @keyframes rotateText {
   0% {
@@ -377,6 +389,9 @@
   100% {
     transform: rotate(0deg);
   }
+}
+* body .container .aboutcontainer .aboutdiv .about .abouttext {
+  margin-top: -60px;
 }
 * body .container .aboutcontainer .aboutdiv .about .abouttext h2 {
   color: #147efb;
