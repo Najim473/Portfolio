@@ -323,7 +323,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: #6aa178;
 }
 * body .container .aboutcontainer .aboutdiv .about .aboutimgcontainer {
   overflow: hidden;
