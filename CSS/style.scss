@@ -269,7 +269,8 @@
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            margin-top: 30px;
+                            // margin-top: 30px; 
+                            padding: 80px 0;
 
                             @media (max-width:1634px) and (min-width:1366px) {
                                 flex-direction: column;
@@ -342,9 +343,10 @@
                 background: #ffffff;
                 height: auto;
                 width: 100vw;
-                margin-top: -20px;
                 padding-bottom: 50px;
                 z-index: -1;
+
+                padding: 80px 0;
 
                 @include media("<=tablet") {
                     padding: 0 10px;
@@ -371,13 +373,14 @@
                         .aboutimgcontainer {
                             overflow: hidden;
                             z-index: 0;
-                            width: 450px;
-                            height: 320px;
+                            width: 490px;
+                            height: 400px;
                             position: relative;
 
+
                             .aboutimg {
-                                width: 350px;
-                                height: 260px;
+                                width: 400px;
+                                height: 320px;
                                 border-radius: 10px;
                                 background-image: url("../Img/about.PNG");
                                 background-position: center;
@@ -389,8 +392,8 @@
                             }
 
                             .rotate {
-                                right: 50px;
-                                bottom: 0px;
+                                right: 30px;
+                                bottom: 40px;
                                 position: absolute;
                                 overflow: hidden;
 
@@ -452,10 +455,12 @@
 
                             h2 {
                                 color: #147efb;
+                                font-size: 25px;
                             }
 
                             h3 {
                                 padding: 20px 0;
+                                font-size: 22px;
                                 line-height: 25px;
                             }
 
