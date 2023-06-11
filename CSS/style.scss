@@ -7,19 +7,23 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
     body {
         font-family: "Bellefair", serif;
 
         .container {
             nav {
-                margin-top: 0.5rem;
-                padding: 20px;
+                padding: 5px 20px;
+                position: fixed;
+                width: 100%;
                 // background: #ffffff;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                z-index: 99;
+                background: #ffffff;
 
                 img {
                     max-width: 1030px;
@@ -50,14 +54,17 @@
             .sidebar-container {
                 background: #ffffff;
                 padding: 10px 0;
+                // margin-top: 25px;
                 box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-                position: relative;
-                z-index: 1;
+                position: fixed;
+                z-index: 99;
+                width: 100%;
 
                 img {
                     width: 20px;
                     height: auto;
                     margin-left: 3%;
+                    margin-top: 0px;
 
                     @include media(">=tablet") {
                         display: none;
@@ -72,19 +79,20 @@
                     z-index: 1;
                     left: 0;
                     top: 0;
-
-                    // background: #000;
                     background: #ffffff;
                     overflow: hidden;
                     transition: 0.5s;
 
-                    a {
-                        padding: 8px;
+                    button {
+                        border: none;
+                        background: none;
+                        // padding: 8px;
                         text-decoration: none;
                         font-size: 36px;
                         color: #818181;
                         display: block;
                         transition: 0.3s;
+                        cursor: pointer;
 
                         &:hover,
                         &:focus {
@@ -122,7 +130,23 @@
                         top: 25%;
                         width: 100%;
                         text-align: center;
-                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            // background: #000;
+                            font-size: 30px;
+                            color: black;
+                            text-decoration: none;
+                            margin-top: 20px;
+
+
+                            &:hover {
+                                color: blue;
+                                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                            }
+                        }
+
                     }
 
                     @include media(">=tablet") {
@@ -220,9 +244,12 @@
                                 }
 
                                 .socialIcon {
+                                    display: flex;
+                                    align-items: center;
 
                                     .github,
-                                    .linkedin {
+                                    .linkedin,
+                                    .netlify {
                                         width: 30px;
                                         height: auto;
 
@@ -230,6 +257,16 @@
                                             margin-right: 30px;
                                         }
                                     }
+
+                                    .vercel {
+                                        width: 70px;
+                                    }
+
+                                    .render {
+                                        width: 50px;
+                                        margin-left: 25px;
+                                    }
+
                                 }
 
                                 @include media("<=tablet") {
@@ -241,6 +278,25 @@
                                     width: 450px;
                                 }
 
+                                .resume {
+                                    display: flex;
+                                    align-items: center;
+
+                                    h2 {
+                                        font-size: 25px;
+                                        font-weight: normal;
+                                    }
+
+                                    a {
+                                        margin-left: 30px;
+
+                                        img {
+
+                                            width: 35px;
+                                        }
+                                    }
+
+                                }
                             }
 
                             .profile {

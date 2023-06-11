@@ -25,25 +25,25 @@
         </a>
         <ul class='list'>
           <a href="#">  <li>Home</li> </a>
-          <a href="#">  <li>About</li> </a>
-          <a href="#">  <li>Projects</li> </a>
-          <a href="#">  <li>Contact</li> </a>  
+          <a href="#about">  <li>About</li> </a>
+          <a href="#projects">  <li>Projects</li> </a>
+          <a href="#contact">  <li>Contact</li> </a>  
         </ul>
       </nav>
  
-      <div class="sidebar-container">
+      <div id="home" class="sidebar-container">
         <img src="./Img/logo.svg" alt="logo" />
         <div id="sidebar" class="overlay">
-          <a href="#" onclick="closeNav()" class="closebtn">
+          <button onclick="closeNav()" class="closebtn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" >
               <path d="M24 1.414L22.586 0L12 10.586L1.414 0L0 1.414L10.586 12L0 22.586L1.414 24L12 13.414L22.586 24L24 22.586L13.414 12L24 1.414Z" fill="#374957"/>      
               </svg>
-             </a>
+             </button>
           <div class="overlay-content">
-            <a href="#"> Home </a>
-            <a href="#"> About </a>
-            <a href="#"> Projects </a>
-            <a href="#"> Contact </a>      
+            <a href="#" onclick="closeSidebar()"> Home </a>
+            <a href="#about" onclick="closeSidebar()"> About </a>
+            <a href="#projects" onclick="closeSidebar()"> Projects </a>
+            <a href="#contact" onclick="closeSidebar()"> Contact </a>      
           </div>        
         </div>
         <img src="./Img/menu.svg"  class="openbtn" onclick="openNav()"alt="openbtn" />
@@ -59,12 +59,27 @@
                 websites and web applications using javascript and web technologies.
               </p>
               <div class="socialIcon">
-                <a href="#">
+                <a href="#" target="_blank">
                   <img class="linkedin" src="./Img/linkedin.svg" alt="" />
                 </a>
-                <a href="#">
+                <a href="#" target="_blank">
                   <img class="github" src="./Img/github.svg" alt="" />
                 </a>
+                <a href="./pages/netlify.html" target="_blank">
+                  <img class="netlify" src="./Img/netlify.svg" alt="" />
+                </a>
+                <a href="./pages/vercel.html" target="_blank">
+                  <img class="vercel" src="./Img/vercel.svg" alt="" />
+                </a>
+                <a href="./pages/render.html" target="_blank">
+                  <img class="render" src="./Img/render.svg" alt="" />
+                </a>                
+              </div>
+              <div class="resume">
+                <h2>Download my resume</h2>
+                <a href="./Img/najimuddin.pdf" download="">
+                  <img class="resume" src="./Img/resume.png" alt="" />
+                </a> 
               </div>
             </div>
             <div class="profile">
@@ -98,7 +113,7 @@
         </div>
     </div>
    </div>
-   <div class="aboutcontainer">
+   <div id="about" class="aboutcontainer">
     <div class="aboutdiv">
       <div class="about">
   <div class="aboutimgcontainer">
@@ -122,11 +137,10 @@
           As a Junior Front-End Developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, Next, Vue, MUI Tailwind, and SCSS. I excel in designing and maintaining responsiv websites that offer a smooth user experience. My expertise lies in craftin dynamic, engaging interfaces through writing clean and optimized code an utilizing cutting-edge development tools and techniques. 
         </p>
       </div>
-      </div>
-  
+      </div>  
     </div>
    </div>
-   <div class="projectcontainer">
+   <div id="projects" class="projectcontainer">
     <div class="projectdiv">
       <h2>PORTFOLIO</h2>
       <p>Each project is a unique piece of development</p>
@@ -159,6 +173,7 @@
    </div>
     </div>
     <script>   
+ 
       /* Open */
 function openNav() {
   document.querySelector("#sidebar").style.height = "100%";
@@ -166,6 +181,10 @@ function openNav() {
 
 /* Close */
 function closeNav() {
+  document.querySelector("#sidebar").style.height = "0%";
+}
+// Close Sidebar 
+const closeSidebar =()=>{
   document.querySelector("#sidebar").style.height = "0%";
 }
 // Text rotate 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>netlify</title>
+    <style>
+      body {
+        margin: 5%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 100px;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Deployed projects on netlify</h2>
+    <h2 id="para"></h2>
+    <div id="table-container"></div>
+    <!-- <table> -->
+    <!-- <tr>
+        <th>Name</th>
+        <th>Link</th>
+      </tr>
+      <tr>
+        <td>Front-End</td>
+        <td><a href="https://admin-frontend-dbox.onrender.com" target="_blank">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>Back-End</td>
+        <td><a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/server" target="_blank">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>Front-End</td>
+        <td><a href="https://admin-frontend-dbox.onrender.com" target="_blank">Click Here</a></td>
+      </tr>
+      <tr>
+        <td>Back-End</td>
+        <td><a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/server" target="_blank">Click Here</a></td>
+      </tr> -->
+    <!-- </table> -->
+    <script>
+      var tableData = [
+        { name: "John Doe", Link: "https://www.example.com" },
+        { name: "Jane Smith", Link: "https://www.example.com" },
+        { name: "Bob Johnson", Link: "https://www.upwork.com/nx/find-work/best-matches" },
+      ];
+
+      // Get the table container element
+      var tableContainer = document.getElementById("table-container");
+
+      // Create the table element
+      var table = document.createElement("table");
+
+      // Create the table header
+      var thead = document.createElement("thead");
+      var headerRow = document.createElement("tr");
+      var headers = ["Name","Link"];
+
+      headers.forEach(function (headerText) {
+        var th = document.createElement("th");
+        th.appendChild(document.createTextNode(headerText));
+        headerRow.appendChild(th);
+      });
+
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      // Create the table body
+      var tbody = document.createElement("tbody");
+
+      tableData.forEach(function (rowData) {
+        var row = document.createElement("tr");
+
+        for (var key in rowData) {
+          var cell = document.createElement("td");
+
+          if (key === "Link") {
+            var link = document.createElement("a");
+
+            link.setAttribute("href", rowData[key]);
+            // link.appendChild(document.createTextNode(rowData[key]));
+            link.appendChild(document.createTextNode('Click Here'));
+            cell.appendChild(link);
+          } else {
+            cell.appendChild(document.createTextNode(rowData[key]));
+          }
+
+          row.appendChild(cell);
+        }
+
+        tbody.appendChild(row);
+      });
+
+      table.appendChild(tbody);
+
+      // Append the table to the container element
+      tableContainer.appendChild(table);
+    </script>
+  </body>
+</html>

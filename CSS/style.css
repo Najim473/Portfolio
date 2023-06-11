@@ -8,17 +8,21 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 * body {
   font-family: "Bellefair", serif;
 }
 * body .container nav {
-  margin-top: 0.5rem;
-  padding: 20px;
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  z-index: 99;
+  background: #ffffff;
 }
 * body .container nav img {
   max-width: 1030px;
@@ -45,13 +49,15 @@
   background: #ffffff;
   padding: 10px 0;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
 }
 * body .container .sidebar-container img {
   width: 20px;
   height: auto;
   margin-left: 3%;
+  margin-top: 0px;
 }
 @media (min-width: 900px) {
   * body .container .sidebar-container img {
@@ -69,19 +75,21 @@
   overflow: hidden;
   transition: 0.5s;
 }
-* body .container .sidebar-container .overlay a {
-  padding: 8px;
+* body .container .sidebar-container .overlay button {
+  border: none;
+  background: none;
   text-decoration: none;
   font-size: 36px;
   color: #818181;
   display: block;
   transition: 0.3s;
+  cursor: pointer;
 }
-* body .container .sidebar-container .overlay a:hover, * body .container .sidebar-container .overlay a:focus {
+* body .container .sidebar-container .overlay button:hover, * body .container .sidebar-container .overlay button:focus {
   color: blue;
 }
 @media (min-width: 900px) {
-  * body .container .sidebar-container .overlay a {
+  * body .container .sidebar-container .overlay button {
     font-size: 20px;
   }
 }
@@ -106,7 +114,18 @@
   top: 25%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+* body .container .sidebar-container .overlay .overlay-content a {
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  margin-top: 20px;
+}
+* body .container .sidebar-container .overlay .overlay-content a:hover {
+  color: blue;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 @media (min-width: 900px) {
   * body .container .sidebar-container .overlay {
@@ -190,14 +209,27 @@
   color: #999;
   padding: 15px 30px 15px 0;
 }
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon {
+  display: flex;
+  align-items: center;
+}
 * body .container .contentcontainer .contentdiv .section .content .details .socialIcon .github,
-* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .linkedin {
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .linkedin,
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .netlify {
   width: 30px;
   height: auto;
 }
 * body .container .contentcontainer .contentdiv .section .content .details .socialIcon .github:first-child,
-* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .linkedin:first-child {
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .linkedin:first-child,
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .netlify:first-child {
   margin-right: 30px;
+}
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .vercel {
+  width: 70px;
+}
+* body .container .contentcontainer .contentdiv .section .content .details .socialIcon .render {
+  width: 50px;
+  margin-left: 25px;
 }
 @media (max-width: 900px) {
   * body .container .contentcontainer .contentdiv .section .content .details {
@@ -208,6 +240,20 @@
   * body .container .contentcontainer .contentdiv .section .content .details {
     width: 450px;
   }
+}
+* body .container .contentcontainer .contentdiv .section .content .details .resume {
+  display: flex;
+  align-items: center;
+}
+* body .container .contentcontainer .contentdiv .section .content .details .resume h2 {
+  font-size: 25px;
+  font-weight: normal;
+}
+* body .container .contentcontainer .contentdiv .section .content .details .resume a {
+  margin-left: 30px;
+}
+* body .container .contentcontainer .contentdiv .section .content .details .resume a img {
+  width: 35px;
 }
 * body .container .contentcontainer .contentdiv .section .content .profile {
   position: relative;
