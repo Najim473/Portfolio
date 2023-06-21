@@ -6,14 +6,17 @@
     <title>netlify</title>
     <style>
       body {
-        margin: 5%;
+        margin: 2% 3%;
+        overflow-x: auto;
       }
-      h2 {
+      h1 {
         text-align: center;
-        font-size: 30px;
-        margin-bottom: 100px;
-        text-decoration: underline;
-        text-underline-offset: 10px;
+        padding: 20px 0;
+        background: #2786df;
+        color: #ffffff;
+        /* font-style: ; */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        /* font-weight: 100; */
       }
       table {
         font-family: arial, sans-serif;
@@ -25,7 +28,8 @@
       th {
         border: 1px solid #dddddd;
         text-align: left;
-        padding: 8px;
+        padding: 20px 0;
+        text-align: center;
       }
 
       tr:nth-child(even) {
@@ -37,48 +41,130 @@
     </style>
   </head>
   <body>
-    <h2>Deployed projects on netlify</h2>
-    <h2 id="para"></h2>
+    <h1>Deployed projects on netlify</h1>
     <div id="table-container"></div>
-    <!-- <table> -->
-    <!-- <tr>
-        <th>Name</th>
-        <th>Link</th>
-      </tr>
-      <tr>
-        <td>Front-End</td>
-        <td><a href="https://admin-frontend-dbox.onrender.com" target="_blank">Click Here</a></td>
-      </tr>
-      <tr>
-        <td>Back-End</td>
-        <td><a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/server" target="_blank">Click Here</a></td>
-      </tr>
-      <tr>
-        <td>Front-End</td>
-        <td><a href="https://admin-frontend-dbox.onrender.com" target="_blank">Click Here</a></td>
-      </tr>
-      <tr>
-        <td>Back-End</td>
-        <td><a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/server" target="_blank">Click Here</a></td>
-      </tr> -->
-    <!-- </table> -->
     <script>
       var tableData = [
-        { name: "John Doe", Link: "https://www.example.com" },
-        { name: "Jane Smith", Link: "https://www.example.com" },
-        { name: "Bob Johnson", Link: "https://www.upwork.com/nx/find-work/best-matches" },
+        
+  
+        {
+          name: "Education Moonlight",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/Education-moonlight.git",
+          Link: "https://education-moonlight.netlify.app/",
+        },
+        ,
+        {
+          name: "Portfolio",
+          label: "JS & SCSS",
+          Github: "https://github.com/Najim473/Portfolio.git",
+          Link: "https://najimuddin.netlify.app",
+        },
+        {
+          name: "Kajkam",
+          label: "React.js & CSS",
+          Github: "#",
+          Link: "https://kajkam.netlify.app",
+        },
+        {
+          name: "Portfolio for client",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/portfolio-for-client.git",
+          Link: "https://portfolio-for-client.netlify.app/",
+        },
+        {
+          name: "Mac Shop",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/mac-shop.git",
+          Link: "https://i-mac-shop.netlify.app/",
+        },
+        {
+          name: "University Management",
+          label: "jQuery & CSS",
+          Github: "https://github.com/Najim473/University-magagement-systme.git",
+          Link: "https://varsity-management.netlify.app/",
+        },
+        {
+          name: "Swa-Connecst-Form",
+          label: "React.js & CSS",
+          Github: "https://github.com/Najim473/SWA-CONNECT-FORM.git",
+          Link: "https://swa-connect-form.netlify.app/",
+        },
+        {
+          name: "Orbido",
+          label: "react.js & CSS",
+          Github: "#",
+          Link: "https://orbido-website.netlify.app/",
+        },
+        {
+          name: "Mango-E-commerce",
+          label: "React.js & CSS",
+          Github: "Najim473",
+          Link: "https://react-mango-dashboard.netlify.app/products",
+        },
+        {
+          name: "Parallax With Js",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/Parallax-with-js.git",
+          Link: "https://parallax-with-js.netlify.app/",
+        },
+        {
+          name: "BMI Calculator",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/BMI-CALCULATOR.git",
+          Link: "https://bmi-calcul.netlify.app",
+        },
+        {
+          name: "Add Restaurant",
+          label: "vue.js & CSS",
+          Github: "https://github.com/Najim473/vue-restaurant-management-app.git",
+          Link: "https://vue-js-add-restaurant.netlify.app/",
+        },
+        {
+          name: "Javascript Todo",
+          label: "JS & CSS",
+          Github: "Najim473",
+          Link: "https://using-js-todo-list.netlify.app",
+        },
+        {
+          name: "Tip Calculation",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/Tip-calculator.git",
+          Link: "https://tips-calculate.netlify.app",
+        },
+        {
+          name: "Js Modal Text Edit",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/JS-Modal-Edit-text.git",
+          Link: "https://js-modal-text-edit.netlify.app/",
+        },
+        {
+          name: "Order proposal",
+          label: "React.js & CSS",
+          Github: "#",
+          Link: "https://kajkam-proposal-page.netlify.app/",
+        },
+        {
+          name: "Word Length Cal",
+          label: "JS & CSS",
+          Github: "#",
+          Link: "https://word-length-calculation.netlify.app",
+        },
+        {
+          name: "html temp E. v.",
+          label: "JS & CSS",
+          Github: "https://github.com/Najim473/email-template.git",
+          Link: "https://email-varification-html-template.netlify.app",
+        },
       ];
-
       // Get the table container element
       var tableContainer = document.getElementById("table-container");
-
       // Create the table element
       var table = document.createElement("table");
-
       // Create the table header
       var thead = document.createElement("thead");
       var headerRow = document.createElement("tr");
-      var headers = ["Name","Link"];
+      var headers = ["Name", "Technologies", "Github", "Netlify"];
 
       headers.forEach(function (headerText) {
         var th = document.createElement("th");
@@ -94,24 +180,33 @@
 
       tableData.forEach(function (rowData) {
         var row = document.createElement("tr");
-
+// START 
         for (var key in rowData) {
-          var cell = document.createElement("td");
-
+          var cell = document.createElement("td");          
           if (key === "Link") {
             var link = document.createElement("a");
 
             link.setAttribute("href", rowData[key]);
             // link.appendChild(document.createTextNode(rowData[key]));
-            link.appendChild(document.createTextNode('Click Here'));
+            link.appendChild(document.createTextNode("Click Here"));
             cell.appendChild(link);
-          } else {
+          } 
+         else if (key === "Github") {
+            var link = document.createElement("a");
+            link.setAttribute("href", rowData[key]);
+            // link.appendChild(document.createTextNode(rowData[key]));
+            link.appendChild(document.createTextNode("Link"));
+            cell.appendChild(link);
+          } 
+          else {
             cell.appendChild(document.createTextNode(rowData[key]));
           }
-
           row.appendChild(cell);
         }
-
+        // END 
+// START 
+ 
+        // END 
         tbody.appendChild(row);
       });
 

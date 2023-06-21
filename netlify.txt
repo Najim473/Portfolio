@@ -1,99 +1,358 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" sizes="92x92" href="./Img/white.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>netlify</title>
-    <style>
-      body {
-        margin: 5%;
-      }
-      h2 {
-        text-align: center;
-        font-size: 30px;
-        margin-bottom: 100px;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-      }
-      table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      td,
-      th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
-      a {
-        text-decoration: none;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>portfolio</title>
   </head>
   <body>
-    <h2>Deployed projects on netlify</h2>
-    <h2 id="para"></h2>
-    <table id="table">      
-      <tr id="tableRow">
-      </tr>
-      <!-- <tr>
-        <th>Name</th>
-        <th>Link</th>
-      </tr>
-      <tr>
-        <td>Front-End</td>
-        <td><a href="https://admin-frontend-dbox.onrender.com" target="_blank">Click Here</a></td>
-      </tr>
-      <tr>
-        <td>Back-End</td>
-        <td><a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/server" target="_blank">Click Here</a></td>
-      </tr>
-      <tr>
-        <td>Front-End</td>
-        <td><a href="https://admin-frontend-dbox.onrender.com" target="_blank">Click Here</a></td>
-      </tr>
-      <tr>
-        <td>Back-End</td>
-        <td><a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/server" target="_blank">Click Here</a></td>
-      </tr> -->
-    </table>
+    <div class="container">
+      <nav>
+        <a id="home" href="#">
+          <img src="./Img/logo.png" alt="" />
+        </a>
+        <ul class="list">
+          <a href="#"> <li>Home</li> </a>
+          <a href="#about"> <li>About</li> </a>
+          <a href="#projects"> <li>Projects</li> </a>
+          <a href="#contact"><li>Contact</li> </a>
+        </ul>
+      </nav>
+
+      <div id="home" class="sidebar-container">
+        <img id="#home" src="./Img/logo.svg" alt="logo" />
+        <div id="sidebar" class="overlay">
+          <button onclick="closeNav()" class="closebtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
+              <path
+                d="M24 1.414L22.586 0L12 10.586L1.414 0L0 1.414L10.586 12L0 22.586L1.414 24L12 13.414L22.586 24L24 22.586L13.414 12L24 1.414Z"
+                fill="#374957"
+              />
+            </svg>
+          </button>
+          <div class="overlay-content">
+            <a href="#" onclick="closeSidebar()"> Home </a>
+            <a href="#about" onclick="closeSidebar()"> About </a>
+            <a href="#projects" onclick="closeSidebar()"> Projects </a>
+            <a href="#contact" onclick="closeSidebar()"> Contact </a>
+          </div>
+        </div>
+        <img
+          src="./Img/menu.svg"
+          class="openbtn"
+          onclick="openNav()"
+          alt="openbtn"
+        />
+      </div>
+      <div class="contentcontainer">
+        <div class="contentdiv">
+          <div class="section">
+            <div class="content">
+              <div class="details">
+                <h2>Front-End Developer</h2>
+                <p>
+                  Hi, I'm Najim. A passionate web developer who designs and
+                  develops websites and web applications using javascript and
+                  web technologies.
+                </p>
+                <div class="socialIcon">
+                  <a
+                    href="https://www.linkedin.com/in/najim-uddin/"
+                    target="_blank"
+                  >
+                    <img class="linkedin" src="./Img/linkedin.svg" alt="" />
+                  </a>
+                  <a href="https://github.com/Najim473" target="_blank">
+                    <img class="github" src="./Img/github.svg" alt="" />
+                  </a>
+                  <a href="./pages/netlify.html" target="_blank">
+                    <img class="netlify" src="./Img/netlify.svg" alt="" />
+                  </a>
+                  <!-- <a href="./pages/vercel.html" target="_blank">
+                  <img class="vercel" src="./Img/vercel.svg" alt="" />
+                </a> -->
+                  <a href="./pages/render.html" target="_blank">
+                    <img class="render" src="./Img/render.svg" alt="" />
+                  </a>
+                  <a href="./pages/released.html" target="_blank">
+                    <h2 class="live">Released</h2>
+                  </a>
+                </div>
+                <div class="resume">
+                  <h2>Download my resume</h2>
+                  <a href="./Img/najimuddin.pdf" download="">
+                    <img class="resume" src="./Img/resume.png" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="profile">
+                <img class="me" src="./Img/me.jpg" alt="porfile" />
+              </div>
+            </div>
+            <div class="skills">
+              <h2>Tech Stack <span>|</span></h2>
+              <div class="skillsLogo">
+                <img src="./Img/html.png" alt="html" />
+                <img src="./Img/css.png" alt="css" />
+                <img src="./Img/js.png" alt="js" /><img
+                  src="./Img/react.png"
+                  alt="react"
+                /><img src="./Img/nextjs.png" alt="nextjs" /><img
+                  src="./Img/vuejs.png"
+                  alt="vuejs"
+                />
+                <!-- <img src="./Img/nodejs.png" alt="nodejs" />
+              <img src="./Img/expressjs.png" alt="expressjs" /><img
+                src="./Img/mongodb.png"
+                alt="mongodb"
+              /> -->
+                <img src="./Img/mui.png" alt="mui" /><img
+                  src="./Img/tailwindcss2.png"
+                  alt="tailwindcss"
+                />
+                <img src="./Img/sass.png" alt="sass" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="aboutcontainer">
+        <div class="aboutdiv">
+          <div class="about">
+            <div class="aboutimgcontainer">
+              <div class="aboutimg"></div>
+              <div class="rotate">
+                <div class="circle">
+                  <div class="logo"></div>
+                  <div class="text">
+                    <p>FRONT-END WEB DEVELOPER</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="abouttext">
+              <h2>ABOUT ME</h2>
+              <h3>A dedicated Web Developer based in Dhaka, Bangladesh</h3>
+              <p>
+                As a Junior Front-End Developer, I possess an impressive arsenal
+                of skills in HTML, CSS, JavaScript, React, Next, Vue, MUI
+                Tailwind, and SCSS. I excel in designing and maintaining
+                responsiv websites that offer a smooth user experience. My
+                expertise lies in craftin dynamic, engaging interfaces through
+                writing clean and optimized code an utilizing cutting-edge
+                development tools and techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="projects" class="projectcontainer">
+        <div class="projectdiv">
+          <h2>PORTFOLIO</h2>
+          <p>Each project is a unique piece of development</p>
+          <!-- Start project-1 -->
+          <div style="margin: 50px 0" class="project">
+            <div style="background-image: url('./Img/orbido.png');" class="box box1"></div>
+            <div class="box2">
+              <h1>Freelancing site</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis
+                aliquam nihil ex alias dolorum sunt blanditiis debitis sequi
+                voluptatibus illo error vero totam libero
+              </p>
+              <div class="technologies">
+                <button>React</button>
+                <button>CSS</button>
+              </div>
+              <div class="sampleofcode">
+                <div class="github">
+                  <h1>Code</h1>
+                  <a href="#">
+                    <img src="./Img/github.svg" alt="" />
+                  </a>
+                </div>
+                <div class="demo">
+                  <h1>Demo</h1>
+                  <a href="https://orbido-website.netlify.app/">
+                    <img src="./Img/export.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End  -->
+          <!-- Start project-2  -->
+          <div class="project-2">
+            <div class="box2">
+              <h1>Freelancing site</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis
+                aliquam nihil ex alias dolorum sunt blanditiis debitis sequi
+                voluptatibus illo error vero totam libero
+              </p>
+              <div class="technologies">
+                <button>React</button>
+                <button>CSS</button>
+              </div>
+              <div class="sampleofcode">
+                <div class="github">
+                  <h1>Code</h1>
+                  <a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/client">
+                    <img src="./Img/github.svg" alt="" />
+                  </a>
+                </div>
+                <div class="demo">
+                  <h1>Demo</h1>
+                  <a href="https://admin-frontend-dbox.onrender.com/">
+                    <img src="./Img/export.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div style="background-image: url('./Img/mango.png');" class="box box1"></div>
+          </div>
+          <!-- End  -->
+          <!-- Start project-3 -->
+          <div style="margin-bottom: 50px" class="project">
+            
+            <div style="background-image: url('./Img/university mangement.png');" class="box box1"></div>
+            <div class="box2">
+              <h1>University Management</h1>
+              <p>
+                 
+              </p>
+              <div class="technologies">
+                <button>jQuery</button>
+                <button>CSS</button>
+              </div>
+              <div class="sampleofcode">
+                <div class="github">
+                  <h1>Code</h1>
+                  <a href="https://github.com/Najim473/University-magagement-systme.git">
+                    <img src="./Img/github.svg" alt="" />
+                  </a>
+                </div>
+                <div class="demo">
+                  <h1>Demo</h1>
+                  <a href="https://varsity-management.netlify.app/index.html">
+                    <img src="./Img/export.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+         
+          <!-- End  -->
+          <!-- Start  project-4 -->
+          <div class="project-2">
+            <div class="box2">
+              <h1>Protfolio</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis
+                aliquam nihil ex alias dolorum sunt blanditiis debitis sequi
+                voluptatibus illo error vero totam libero
+              </p>
+              <div class="technologies">
+                <button>HTML</button>
+                <button>SCSS</button>
+              </div>
+              <div class="sampleofcode">
+                <div class="github">
+                  <h1>Code</h1>
+                  <a href="https://github.com/Najim473/portfolio-for-client">
+                    <img src="./Img/github.svg" alt="" />
+                  </a>
+                </div>
+                <div class="demo">
+                  <h1>Demo</h1>
+                  <a href="https://portfolio-for-client.netlify.app/">
+                    <img src="./Img/export.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div style="background-image: url('./Img/portfolio.PNG');" class="box box1"></div>
+          </div>
+          <!-- End  -->
+        </div>
+     
+      </div>
+      <div id="contact" class="contact-container">
+       <div class="contact">
+        <h2>CONTACT</h2>
+        <h1>Don't be shy! Hit me up! 👇</h1>
+        <div class="contact-flex">
+          <div class="location">
+            <div class="contact-img">
+              <img src="/Img/map.svg" alt="location">
+            </div>
+           <div class="location-dhaka">
+            <h2>Location</h2>
+            Dhaka, Bangladesh
+           </div>
+          </div>
+          <div class="mail">
+       <div class="mail-img">
+        <img src="Img/mail.svg" alt="mail">
+       </div>
+            <div class="mail-me">
+              <h2>Mail</h2>
+              <a href="mailto:najim7304@gmail.com">
+                najim7304@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+       </div>        
+      </div>
+     <div class="footer-container">
+      <div class="footer">
+        <h3>Copyright©️2023.All rights are reserved</h3>
+        <div class="footer-icon">
+          <a
+          href="https://www.linkedin.com/in/najim-uddin/"
+          target="_blank"
+        >
+          <img class="linkedin" src="./Img/linkedin.svg" alt="" />
+        </a>
+        <a href="https://github.com/Najim473" target="_blank">
+          <img class="github" src="./Img/github.svg" alt="" />
+        </a>
+        </div>
+      </div>
+     </div>
+    </div>
     <script>
- const data = [{
-    name: 'protfoli',
-    link: './/kdfks'
-},
-{
-    name: 'dashboard',
-    link: './/kdfks'
-},
-{
-    name: 'board',
-    link: './/kdfks'
-}
-] 
-   console.log(data);
-const paragraph =()=>{
-  const table = document.getElementById('table');
-   const tr = document.getElementById('tableRow');
-   const para = document.getElementById('para')
-  // data.forEach(item=>{ 
-  //  const p = document.createElement('p');
-  //  p.textContent = item.name;
-  //  para.appendChild(p);
-  // })  
-  data.forEach(item=>{
-    const td = document.createElement('td');
-    td.textContent = item.name;
-    tr.appendChild(td);
-  })
-}
-paragraph();
+      /* Open */
+      function openNav() {
+        document.querySelector("#sidebar").style.height = "100%";
+      }
+
+      /* Close */
+      function closeNav() {
+        document.querySelector("#sidebar").style.height = "0%";
+      }
+      // Close Sidebar
+      const closeSidebar = () => {
+        document.querySelector("#sidebar").style.height = "0%";
+      };
+      // Text rotate
+      const text = document.querySelector(".text p");
+      text.innerHTML = text.innerHTML
+        .split("")
+        .map(
+          (char, i) =>
+            `<span style="transform:rotate(${i * 15}deg)">${char} </span>`
+        )
+        .join("");
     </script>
   </body>
 </html>

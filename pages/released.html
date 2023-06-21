@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>released</title>
+    <style>
+      body {
+        margin: 2% 3%;
+        overflow-x: auto;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px 0;
+        background: #2786df;
+        color: #ffffff;
+        /* font-style: ; */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* font-weight: 100; */
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+     
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Released projects that I have worked</h1>     
+    <div id="table-container"></div>
+    <script>
+      var tableData = [
+        {
+         name: "NRB Global",
+         label:' Bangladesh most active non residential comminity.',
+         Link: "https://nrbglobal.org/"
+         },          
+      ]; 
+      // Get the table container element
+      var tableContainer = document.getElementById("table-container");
+      // Create the table element
+      var table = document.createElement("table");
+      // Create the table header
+      var thead = document.createElement("thead");
+      var headerRow = document.createElement("tr");
+      var headers = ["Name","Short Des.","Link"];
+
+      headers.forEach(function (headerText) {
+        var th = document.createElement("th");
+        th.appendChild(document.createTextNode(headerText));
+        headerRow.appendChild(th);
+      });
+
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      // Create the table body
+      var tbody = document.createElement("tbody");
+
+      tableData.forEach(function (rowData) {
+        var row = document.createElement("tr");
+
+        for (var key in rowData) {
+          var cell = document.createElement("td");
+
+          if (key === "Link") {
+            var link = document.createElement("a");
+
+            link.setAttribute("href", rowData[key]);
+            // link.appendChild(document.createTextNode(rowData[key]));
+            link.appendChild(document.createTextNode('Click Here'));
+            cell.appendChild(link);
+          } else {
+            cell.appendChild(document.createTextNode(rowData[key]));
+          }
+
+          row.appendChild(cell);
+        }
+
+        tbody.appendChild(row);
+      });
+
+      table.appendChild(tbody);
+
+      // Append the table to the container element
+      tableContainer.appendChild(table);
+    </script>
+  </body>
+</html>
