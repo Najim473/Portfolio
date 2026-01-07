@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" sizes="92x92" href="./Img/white.svg" />
+    <link rel="icon" type="image/png" sizes="92x92" href="./img/white.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>portfolio</title>
   </head>
   <body>
     <div class="container">
       <nav>
         <a id="home" href="#">
-          <img src="./Img/logo.png" alt="" />
+          <img src="./img/logo.png" alt="" />
         </a>
         <ul class="list">
           <a href="#"> <li>Home</li> </a>
@@ -27,7 +27,7 @@
       </nav>
 
       <div id="home" class="sidebar-container">
-        <img id="#home" src="./Img/logo.svg" alt="logo" />
+        <img id="#home" src="./img/logo.svg" alt="logo" />
         <div id="sidebar" class="overlay">
           <button onclick="closeNav()" class="closebtn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
@@ -45,7 +45,7 @@
           </div>
         </div>
         <img
-          src="./Img/menu.svg"
+          src="./img/menu.svg"
           class="openbtn"
           onclick="openNav()"
           alt="openbtn"
@@ -67,19 +67,19 @@
                     href="https://www.linkedin.com/in/najim-uddin/"
                     target="_blank"
                   >
-                    <img class="linkedin" src="./Img/linkedin.svg" alt="" />
+                    <img class="linkedin" src="./img/linkedin.svg" alt="" />
                   </a>
                   <a href="https://github.com/Najim473" target="_blank">
-                    <img class="github" src="./Img/github.svg" alt="" />
+                    <img class="github" src="./img/github.svg" alt="" />
                   </a>
                   <a href="./pages/netlify.html" target="_blank">
-                    <img class="netlify" src="./Img/netlify.svg" alt="" />
+                    <img class="netlify" src="./img/netlify.svg" alt="" />
                   </a>
                   <!-- <a href="./pages/vercel.html" target="_blank">
-                  <img class="vercel" src="./Img/vercel.svg" alt="" />
+                  <img class="vercel" src="./img/vercel.svg" alt="" />
                 </a> -->
                   <a href="./pages/render.html" target="_blank">
-                    <img class="render" src="./Img/render.svg" alt="" />
+                    <img class="render" src="./img/render.svg" alt="" />
                   </a>
                   <a href="./pages/released.html" target="_blank">
                     <h2 class="live">Released</h2>
@@ -87,37 +87,37 @@
                 </div>
                 <div class="resume">
                   <h2>Download my resume</h2>
-                  <a href="./Img/najimuddin.pdf" download="">
-                    <img class="resume" src="./Img/resume.png" alt="" />
+                  <a href="./img/najimuddin.pdf" download="">
+                    <img class="resume" src="./img/resume.png" alt="" />
                   </a>
                 </div>
               </div>
               <div class="profile">
-                <img class="me" src="./Img/me.jpg" alt="porfile" />
+                <img class="me" src="./img/me.jpg" alt="porfile" />
               </div>
             </div>
             <div class="skills">
               <h2>Tech Stack <span>|</span></h2>
               <div class="skillsLogo">
-                <img src="./Img/html.png" alt="html" />
-                <img src="./Img/css.png" alt="css" />
-                <img src="./Img/js.png" alt="js" /><img
-                  src="./Img/react.png"
+                <img src="./img/html.png" alt="html" />
+                <img src="./img/css.png" alt="css" />
+                <img src="./img/js.png" alt="js" /><img
+                  src="./img/react.png"
                   alt="react"
-                /><img src="./Img/nextjs.png" alt="nextjs" /><img
-                  src="./Img/vuejs.png"
+                /><img src="./img/nextjs.png" alt="nextjs" /><img
+                  src="./img/vuejs.png"
                   alt="vuejs"
                 />
-                <!-- <img src="./Img/nodejs.png" alt="nodejs" />
-              <img src="./Img/expressjs.png" alt="expressjs" /><img
-                src="./Img/mongodb.png"
+                <!-- <img src="./img/nodejs.png" alt="nodejs" />
+              <img src="./img/expressjs.png" alt="expressjs" /><img
+                src="./img/mongodb.png"
                 alt="mongodb"
               /> -->
-                <img src="./Img/mui.png" alt="mui" /><img
-                  src="./Img/tailwindcss2.png"
+                <img src="./img/mui.png" alt="mui" /><img
+                  src="./img/tailwindcss2.png"
                   alt="tailwindcss"
                 />
-                <img src="./Img/sass.png" alt="sass" />
+                <img src="./img/sass.png" alt="sass" />
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@
           <p>Each project is a unique piece of development</p>
           <!-- Start project-1 -->
           <div style="margin: 50px 0" class="project">
-            <div style="background-image: url('./Img/orbido.png');" class="box box1"></div>
+            <div style="background-image: url('./img/orbido.png');" class="box box1"></div>
             <div class="box2">
               <h1>Freelancing site</h1>
               <p>
@@ -175,13 +175,13 @@
                 <div class="github">
                   <h1>Code</h1>
                   <a href="#">
-                    <img src="./Img/github.svg" alt="" />
+                    <img src="./img/github.svg" alt="" />
                   </a>
                 </div>
                 <div class="demo">
                   <h1>Demo</h1>
                   <a href="https://orbido-website.netlify.app/">
-                    <img src="./Img/export.svg" alt="" />
+                    <img src="./img/export.svg" alt="" />
                   </a>
                 </div>
               </div>
@@ -205,24 +205,24 @@
                 <div class="github">
                   <h1>Code</h1>
                   <a href="https://github.com/Najim473/MERN-Admin-Dashboard/tree/master/client">
-                    <img src="./Img/github.svg" alt="" />
+                    <img src="./img/github.svg" alt="" />
                   </a>
                 </div>
                 <div class="demo">
                   <h1>Demo</h1>
                   <a href="https://admin-frontend-dbox.onrender.com/">
-                    <img src="./Img/export.svg" alt="" />
+                    <img src="./img/export.svg" alt="" />
                   </a>
                 </div>
               </div>
             </div>
-            <div style="background-image: url('./Img/mango.png');" class="box box1"></div>
+            <div style="background-image: url('./img/mango.png');" class="box box1"></div>
           </div>
           <!-- End  -->
           <!-- Start project-3 -->
           <div style="margin-bottom: 50px" class="project">
             
-            <div style="background-image: url('./Img/university mangement.png');" class="box box1"></div>
+            <div style="background-image: url('./img/university mangement.png');" class="box box1"></div>
             <div class="box2">
               <h1>University Management</h1>
               <p>
@@ -236,13 +236,13 @@
                 <div class="github">
                   <h1>Code</h1>
                   <a href="https://github.com/Najim473/University-magagement-systme.git">
-                    <img src="./Img/github.svg" alt="" />
+                    <img src="./img/github.svg" alt="" />
                   </a>
                 </div>
                 <div class="demo">
                   <h1>Demo</h1>
                   <a href="https://varsity-management.netlify.app/index.html">
-                    <img src="./Img/export.svg" alt="" />
+                    <img src="./img/export.svg" alt="" />
                   </a>
                 </div>
               </div>
@@ -268,18 +268,18 @@
                 <div class="github">
                   <h1>Code</h1>
                   <a href="https://github.com/Najim473/portfolio-for-client">
-                    <img src="./Img/github.svg" alt="" />
+                    <img src="./img/github.svg" alt="" />
                   </a>
                 </div>
                 <div class="demo">
                   <h1>Demo</h1>
                   <a href="https://portfolio-for-client.netlify.app/">
-                    <img src="./Img/export.svg" alt="" />
+                    <img src="./img/export.svg" alt="" />
                   </a>
                 </div>
               </div>
             </div>
-            <div style="background-image: url('./Img/portfolio.PNG');" class="box box1"></div>
+            <div style="background-image: url('./img/portfolio.PNG');" class="box box1"></div>
           </div>
           <!-- End  -->
         </div>
@@ -292,7 +292,7 @@
         <div class="contact-flex">
           <div class="location">
             <div class="contact-img">
-              <img src="/Img/map.svg" alt="location">
+              <img src="./img/map.svg" alt="location">
             </div>
            <div class="location-dhaka">
             <h2>Location</h2>
@@ -301,7 +301,7 @@
           </div>
           <div class="mail">
        <div class="mail-img">
-        <img src="Img/mail.svg" alt="mail">
+        <img src="./img/mail.svg" alt="mail">
        </div>
             <div class="mail-me">
               <h2>Mail</h2>
@@ -321,10 +321,10 @@
           href="https://www.linkedin.com/in/najim-uddin/"
           target="_blank"
         >
-          <img class="linkedin" src="./Img/linkedin.svg" alt="" />
+          <img class="linkedin" src="./img/linkedin.svg" alt="" />
         </a>
         <a href="https://github.com/Najim473" target="_blank">
-          <img class="github" src="./Img/github.svg" alt="" />
+          <img class="github" src="./img/github.svg" alt="" />
         </a>
         </div>
       </div>
